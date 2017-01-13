@@ -34,6 +34,7 @@ public class Serveur1client {
 			System.out.println("Le serveur est à l'écoute du port "+socketserver.getLocalPort());
 			socketduserveur = socketserver.accept(); 
 		        System.out.println("Un zéro s'est connecté");
+                        
 			out = new PrintWriter(socketduserveur.getOutputStream());
 		        out.println("Vous êtes connecté zéro !");
 		        out.flush();

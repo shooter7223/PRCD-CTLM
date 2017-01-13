@@ -10,6 +10,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -21,6 +22,10 @@ public class ServeurThread implements Runnable  {
     
     private ServerSocket socketserver;
 	   private Socket socket;
+           public Thread t1;
+           /*private PrintWriter out;
+           private BufferedReader in;*/
+
 	   private int nbrclient = 1;
 		public ServeurThread(ServerSocket s){
 			socketserver = s;
@@ -29,10 +34,15 @@ public class ServeurThread implements Runnable  {
 		public void run() {
 
 	        try {
+                    PrintWriter out;
+                    BufferedReader in;
 	        	while(true){
 			  socket = socketserver.accept(); // Un client se connecte on l'accepte
 	                  System.out.println("Le client numéro "+nbrclient+ " est connecté !");
 	                  nbrclient++;
+                          t1 = new Thread(new Authentification(socket));
+                          t1.start();
+                            
 	                  socket.close();
 	        	}
 	        
