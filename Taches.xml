@@ -6,14 +6,6 @@ and open the template in the editor.
 -->
 
 
-<utilisateurs>
+<Taches>
     
-    <id>
-        1
-        <nom>CASPAR</nom>
-        <prenom>Thomas</prenom>
-        <e-mail>ttt@tt.com</e-mail>
-        <motDePasse>toto</motDePasse>
-    </id>
-    
-</utilisateurs>
+</Taches>
