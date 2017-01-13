@@ -34,7 +34,7 @@ public class ServeurThread implements Runnable{
 			while(true){
 				
 			socket = socketserver.accept();
-			System.out.println("Un zéro veut se connecter  ");
+			System.out.println("Nouvelle connextion");
 			
 			t1 = new Thread(new Authentification(socket));
 			t1.start();

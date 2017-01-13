@@ -59,7 +59,10 @@ public class Authentification implements Runnable {
 		
 		
 		boolean connexion = false;
-                if(login == "1" && pass =="toto")
+                System.out.println("login : " + login + " pass : "+pass);
+                String[] log = login.split(" ");
+                System.out.println("taille split : "+ log.length);
+                if(login.equals("1") && pass.equals("toto"))
                 {
                     connexion = true;
                 }
