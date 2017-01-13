@@ -5,31 +5,28 @@
  */
 package prcd.ctlm.serveur;
 
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 
-/**
- *
- * @author thoma
- */
 public class Serveur {
-     static final int PORT = 1978;
+ public static ServerSocket ss = null;
+ public static Thread t;
 
-    public static void main(String[] args){
+ 
+	public static void main(String[] args) {
 		
-		ServerSocket socket;
 		try {
-		socket = new ServerSocket(2009);
-                System.out.println("Serveur créé ");
-		Thread t = new Thread(new ServeurThread(socket));
-		t.start();
-		System.out.println("Mes employeurs sont prêts !");
-		
-		} catch (IOException e) {
+			ss = new ServerSocket(2009);
+			System.out.println("Le serveur est à l'écoute du port "+ss.getLocalPort());
 			
-			e.printStackTrace();
+			t = new Thread(new ServeurThread(ss));
+			t.start();
+			
+		} catch (IOException e) {
+			System.err.println("Le port "+ss.getLocalPort()+" est déjà utilisé !");
 		}
+	
 	}
-    
-}
+
+	
+	}

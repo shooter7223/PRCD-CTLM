@@ -59,8 +59,12 @@ public class Authentification implements Runnable {
 		
 		
 		boolean connexion = false;
+                if(login == "1" && pass =="toto")
+                {
+                    connexion = true;
+                }
                 
-		try {
+		/*try {
 			Scanner sc = new Scanner(new File("zero.txt"));
 			
 			
@@ -73,7 +77,7 @@ public class Authentification implements Runnable {
 			
 		} catch (FileNotFoundException e) {	
 			System.err.println("Le fichier n'existe pas !");
-		}
+		}*/
 	return connexion;
 		
 	}

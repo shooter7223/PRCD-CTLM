@@ -14,41 +14,36 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- *
- * @author thoma
- */
-public class ServeurThread implements Runnable  {
-    
-    private ServerSocket socketserver;
-	   private Socket socket;
-           public Thread t1;
-           /*private PrintWriter out;
-           private BufferedReader in;*/
+import java.io.*;
+import java.net.*;
 
-	   private int nbrclient = 1;
-		public ServeurThread(ServerSocket s){
-			socketserver = s;
+
+public class ServeurThread implements Runnable{
+
+	private ServerSocket socketserver = null;
+	private Socket socket = null;
+
+	public Thread t1;
+	public ServeurThread(ServerSocket ss){
+	 socketserver = ss;
+	}
+	
+	public void run() {
+		
+		try {
+			while(true){
+				
+			socket = socketserver.accept();
+			System.out.println("Un zéro veut se connecter  ");
+			
+			t1 = new Thread(new Authentification(socket));
+			t1.start();
+			
+			}
+		} catch (IOException e) {
+			
+			System.err.println("Erreur serveur");
 		}
 		
-		public void run() {
-
-	        try {
-                    PrintWriter out;
-                    BufferedReader in;
-	        	while(true){
-			  socket = socketserver.accept(); // Un client se connecte on l'accepte
-	                  System.out.println("Le client numéro "+nbrclient+ " est connecté !");
-	                  nbrclient++;
-                          t1 = new Thread(new Authentification(socket));
-                          t1.start();
-                            
-	                  socket.close();
-	        	}
-	        
-	        } catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
+	}
 }
