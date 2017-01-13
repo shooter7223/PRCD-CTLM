@@ -9,6 +9,8 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -28,20 +30,34 @@ public class CTLMProject extends Application {
         
         stage.setScene(scene);
         stage.show();
-        showHome();
+        showIdentification();
     }
     /**
      * Shows the home inside the root.
      */
     public void showHome() {
         try {
-            // Load recipe.
+            // Load home.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(CTLMProject.class.getResource("Home.fxml"));
+            loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
             GridPane home = (GridPane) loader.load();
 
             // Set recipe into the center of root layout.
             root.setCenter(home);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void showIdentification() {
+        try {
+            // Load identification.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
+            AnchorPane identification = (AnchorPane) loader.load();
+
+            // Set recipe into the center of root layout.
+            root.setCenter(identification);
         } catch (IOException e) {
             e.printStackTrace();
         }
