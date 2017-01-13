@@ -19,7 +19,7 @@ import java.net.UnknownHostException;
  */
 public class ClientConnextion {
     
-    public static void main(String[] zero) {
+    public static void main(String[] args) {
 		
 		
 		Socket socket;

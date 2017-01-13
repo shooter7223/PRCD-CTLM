@@ -3,29 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prcd.ctlm.serveur;
+package prcd.ctlm.projet;
 
 import java.io.IOException;
-import java.net.ServerSocket;
+import java.net.InetAddress;
 import java.net.Socket;
 
 /**
  *
  * @author thoma
  */
-public class Serveur {
-     static final int PORT = 1978;
-
+public class MultieClient {
     public static void main(String[] args){
 		
-		ServerSocket socket;
+		Socket socket;
 		try {
-		socket = new ServerSocket(2009);
-                System.out.println("Serveur créé ");
-		Thread t = new Thread(new ServeurThread(socket));
-		t.start();
-		System.out.println("Mes employeurs sont prêts !");
-		
+		socket = new Socket(InetAddress.getLocalHost(),2009);
+		socket.close();
 		} catch (IOException e) {
 			
 			e.printStackTrace();

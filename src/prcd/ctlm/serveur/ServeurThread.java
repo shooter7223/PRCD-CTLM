@@ -10,45 +10,35 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
  *
  * @author thoma
  */
-public class ServeurThread extends Thread {
-    protected Socket socket;
+public class ServeurThread implements Runnable  {
+    
+    private ServerSocket socketserver;
+	   private Socket socket;
+	   private int nbrclient = 1;
+		public ServeurThread(ServerSocket s){
+			socketserver = s;
+		}
+		
+		public void run() {
 
-    public ServeurThread(Socket clientSocket) {
-        this.socket = clientSocket;
-    }
+	        try {
+	        	while(true){
+			  socket = socketserver.accept(); // Un client se connecte on l'accepte
+	                  System.out.println("Le client numéro "+nbrclient+ " est connecté !");
+	                  nbrclient++;
+	                  socket.close();
+	        	}
+	        
+	        } catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
-    public void run() {
-        InputStream inp = null;
-        BufferedReader brinp = null;
-        DataOutputStream out = null;
-        try {
-            inp = socket.getInputStream();
-            brinp = new BufferedReader(new InputStreamReader(inp));
-            out = new DataOutputStream(socket.getOutputStream());
-        } catch (IOException e) {
-            return;
-        }
-        String line;
-        while (true) {
-            try {
-                line = brinp.readLine();
-                if ((line == null) || line.equalsIgnoreCase("QUIT")) {
-                    socket.close();
-                    return;
-                } else {
-                    out.writeBytes(line + "\n\r");
-                    out.flush();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                return;
-            }
-        }
-    }
 }
