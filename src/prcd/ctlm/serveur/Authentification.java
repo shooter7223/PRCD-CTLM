@@ -14,7 +14,7 @@ public class Authentification implements Runnable {
 	private Socket socket;
 	private PrintWriter out = null;
 	private BufferedReader in = null;
-	private String login = "zero", pass =  null;
+	private String login = null, pass =  null, user = null , nom = null, prenom = null , mail = null;
 	public boolean authentifier = false;
 	public Thread t2;
 	
@@ -30,6 +30,12 @@ public class Authentification implements Runnable {
 			
 		while(!authentifier){
 			
+                        out.println("Créer un Compte y/n :");
+			out.flush();
+			user = in.readLine();
+                        
+                        if(user.equals("n"))
+                        {
 			out.println("Entrez votre login :");
 			out.flush();
 			login = in.readLine();
@@ -47,6 +53,43 @@ public class Authentification implements Runnable {
 				authentifier = true;	
 			}
 			else {out.println("erreur"); out.flush();}
+                        }
+                        
+                        else
+                        {
+                            out.println("Entrez un login de connextion:");
+                            out.flush();
+                            login = in.readLine();
+                            
+                            out.println("Entrez un mot de passe de connextion:");
+                            out.flush();
+                            pass = in.readLine();
+                            
+                            out.println("Entrez votre nom:");
+                            out.flush();
+                            nom = in.readLine();
+                            
+                            out.println("Entrez votre prenom:");
+                            out.flush();
+                            prenom = in.readLine();
+                            
+                            out.println("Entrez votre e-mail:");
+                            out.flush();
+                            mail = in.readLine();
+                            
+                            CreerUtilisateur utilisateur = new CreerUtilisateur();
+                            utilisateur.NouveauUtilisateur(login, nom, prenom, mail, pass);
+                            
+                            if(isValid(login, pass)){
+				
+				out.println("connecte");
+				System.out.println(login +" vient de se connecter ");
+				out.flush();
+				authentifier = true;	
+			}
+                            
+                        }
+                        
 		 }
 			
 		} catch (IOException e) {

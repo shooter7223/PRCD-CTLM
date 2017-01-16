@@ -13,7 +13,7 @@ public class Connexion implements Runnable {
 
 	private Socket socket = null;
 	public static Thread t2;
-	public static String login = null, pass = null, message1 = null, message2 = null, message3 = null;
+	public static String login = null, pass = null, message1 = null, message2 = null, message3 = null, user = null, nom = null, prenom = null, mail = null;
 	private PrintWriter out = null;
 	private BufferedReader in = null;
 	private Scanner sc = null;
@@ -36,14 +36,54 @@ public class Connexion implements Runnable {
 		while(!connect ){
 		
 		System.out.println(in.readLine());
-		login = sc.nextLine();
-		out.println(login);
+		user = sc.nextLine();
+		out.println(user);
 		out.flush();
 		
-		System.out.println(in.readLine());
+                if(user.equals("n"))
+                {
+                    System.out.println(in.readLine());
+                    login = sc.nextLine();
+                    out.println(login);
+                    out.flush();
+                    
+                    System.out.println(in.readLine());
+                    pass = sc.nextLine();
+                    out.println(pass);
+                    out.flush();
+                }
+                else 
+                {
+                    System.out.println(in.readLine());
+                    login = sc.nextLine();
+                    out.println(login);
+                    out.flush();
+                    
+                    System.out.println(in.readLine());
+                    pass = sc.nextLine();
+                    out.println(pass);
+                    out.flush();
+                    
+                    System.out.println(in.readLine());
+                    nom = sc.nextLine();
+                    out.println(nom);
+                    out.flush();
+                    
+                    System.out.println(in.readLine());
+                    prenom = sc.nextLine();
+                    out.println(prenom);
+                    out.flush();
+                    
+                    System.out.println(in.readLine());
+                    mail = sc.nextLine();
+                    out.println(mail);
+                    out.flush();
+                    
+                }
+		/*System.out.println(in.readLine());
 		pass = sc.nextLine();
 		out.println(pass);
-		out.flush();
+		out.flush();*/
 		
 		if(in.readLine().equals("connecte")){
 			

@@ -15,20 +15,34 @@ import java.beans.*;
 public class CreerUtilisateur {
     
     public void NouveauUtilisateur(String id, String nom, String prenom, String mail, String pass) throws IOException
-    {
-        JunkXML user1 = new JunkXML("id", id);
-        JunkXML user2 = new JunkXML("nom", nom);
-        JunkXML user3 = new JunkXML("prenom", prenom);
-        JunkXML user4 = new JunkXML("e-mail", mail);
-        JunkXML user5 = new JunkXML("motDePasse", pass);
+    {        
+        FileWriter  xml = new FileWriter ("Utilisateurs.xml", true);
+        xml.write("<utilisateur>\n");
         
-        FileOutputStream xml = new FileOutputStream("Utilisateurs.xml");
-        XMLEncoder encoder = new XMLEncoder(xml);
-        encoder.writeObject(user1);
-        encoder.writeObject(user2);
-        encoder.writeObject(user3);
-        encoder.writeObject(user4);
-        encoder.writeObject(user5);
+        xml.write("<id>");
+        xml.write(id);
+        xml.write("</id>\n");
+        
+        xml.write("<nom>");
+        xml.write(nom);
+        xml.write("</nom>\n");
+        
+        xml.write("<prenom>");
+        xml.write(prenom);
+        xml.write("</prenom>\n");
+        
+        xml.write("<e-mail>");
+        xml.write(mail);
+        xml.write("</e-mail>\n");
+        
+        xml.write("<motDePasse>");
+        xml.write(pass);
+        xml.write("</motDePasse>\n");
+        
+        xml.write("</utilisateur>\n");
+        
+        xml.flush();
+        xml.close();
     }
     
 }

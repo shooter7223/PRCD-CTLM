@@ -1,34 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
-<utilisateurs>
-    
-    
-        <id>1</id>
-        <nom>CASPAR</nom>
-        <prenom>Thomas</prenom>
-        <e-mail>ttt@tt.com</e-mail>
-        <motDePasse>toto</motDePasse>
-		<id>2</id>
-        <nom>CASPAR</nom>
-        <prenom>Thomas</prenom>
-        <e-mail>ttt@tt.com</e-mail>
-        <motDePasse>toto</motDePasse>
-		<id>1</id>
-        <nom>CASPAR</nom>
-        <prenom>Thomas</prenom>
-        <e-mail>ttt@tt.com</e-mail>
-        <motDePasse>toto</motDePasse>
-		<id>3</id>
-        <nom>CASPAR</nom>
-        <prenom>Thomas</prenom>
-        <e-mail>ttt@tt.com</e-mail>
-        <motDePasse>toto</motDePasse>
-    
-    
-</utilisateurs>
+<root>
+<utilisateur>
+<id>a</id>
+<nom>a</nom>
+<prenom>a</prenom>
+<e-mail>a</e-mail>
+<motDePasse>a</motDePasse>
+</utilisateur>
+<utilisateur>
+<id>toto</id>
+<nom>toto</nom>
+<prenom>toto</prenom>
+<e-mail>toto</e-mail>
+<motDePasse>toto</motDePasse>
+</utilisateur>
+<utilisateur>
+<id>pop</id>
+<nom>pop</nom>
+<prenom>pop</prenom>
+<e-mail>pop</e-mail>
+<motDePasse>pop</motDePasse>
+</utilisateur>
+</root>
