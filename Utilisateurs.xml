@@ -8,12 +8,27 @@ and open the template in the editor.
 
 <utilisateurs>
     
-    <id>
-        1
+    
+        <id>1</id>
         <nom>CASPAR</nom>
         <prenom>Thomas</prenom>
         <e-mail>ttt@tt.com</e-mail>
         <motDePasse>toto</motDePasse>
-    </id>
+		<id>2</id>
+        <nom>CASPAR</nom>
+        <prenom>Thomas</prenom>
+        <e-mail>ttt@tt.com</e-mail>
+        <motDePasse>toto</motDePasse>
+		<id>1</id>
+        <nom>CASPAR</nom>
+        <prenom>Thomas</prenom>
+        <e-mail>ttt@tt.com</e-mail>
+        <motDePasse>toto</motDePasse>
+		<id>3</id>
+        <nom>CASPAR</nom>
+        <prenom>Thomas</prenom>
+        <e-mail>ttt@tt.com</e-mail>
+        <motDePasse>toto</motDePasse>
+    
     
 </utilisateurs>

@@ -5,6 +5,9 @@
  */
 package prcd.ctlm.serveur;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.Attributes;
@@ -12,9 +15,11 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class ReadXML {
-
-   public static void main(String argv[]) {
-
+    boolean idTest = false;
+    boolean accept = false;
+   
+   public boolean read(String Id_ , String pass_) {
+    System.out.println("id : " + Id_ + "pass : " + pass_);
     try {
 
 	SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -67,14 +72,21 @@ public class ReadXML {
 	}
 
 	public void characters(char ch[], int start, int length) throws SAXException {
-
+               
 		if (utilisateur) {
-			System.out.println(" " + new String(ch, start, length));
+			System.out.println(" " + new String (ch, start, length));
 			utilisateur = false;
 		}
 
 		if (id) {
-			System.out.println("id : " + new String(ch, start, length));
+                        String Id = new String (ch, start, length);
+			System.out.println("id : " + Id);
+                        
+                        if(Id.equals(Id_)){
+                            System.out.println("ID TROUVER " + Id);
+                            idTest = true;
+                        }
+                        
 			id = false;
 		}
 
@@ -92,7 +104,13 @@ public class ReadXML {
 			mail = false;
 		}
                 if (motDePasse) {
-			System.out.println("motDePasse : " + new String(ch, start, length));
+                        String Mot = new String(ch, start, length);
+			System.out.println("motDePasse : " + Mot);
+                        if(Mot.equals(pass_) && idTest == true)
+                        {
+                            accept = true;
+                            idTest = false;
+                        }
 			motDePasse = false;
 		}
 
@@ -105,6 +123,8 @@ public class ReadXML {
      } catch (Exception e) {
        e.printStackTrace();
      }
+    
+    return accept;
 
    }
 
