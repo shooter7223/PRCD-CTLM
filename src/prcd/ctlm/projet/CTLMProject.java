@@ -10,58 +10,58 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Thomas Caspar and Thérésien Esberard
  */
 public class CTLMProject extends Application {
     private BorderPane root;
+    private Stage primaryStage;
 
     @Override
-    public void start(Stage stage) throws Exception {
-        root = FXMLLoader.load(getClass().getResource("Root.fxml"));
-
-        Scene scene = new Scene(root);
+    public void start(Stage primaryStage) throws IOException {
+        this.primaryStage = primaryStage;
+        this.primaryStage.setTitle("CTLM");
         
-        stage.setScene(scene);
-        stage.show();
+        showLayout();
         showIdentification();
+    }
+    
+    public void showLayout() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(CTLMProject.class.getResource("Root.fxml"));
+        root = loader.load();
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
     /**
      * Shows the home inside the root.
+     * @throws java.io.IOException
      */
-    public void showHome() {
-        try {
-            // Load home.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
-            GridPane home = (GridPane) loader.load();
+    public void showHome() throws IOException {
+        // Load home.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(CTLMProject.class.getResource("Home.fxml"));
+        GridPane home = loader.load();
 
-            // Set recipe into the center of root layout.
-            root.setCenter(home);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Set home into the center of root layout.
+        root.setCenter(home);
     }
     
-    public void showIdentification() {
-        try {
-            // Load identification.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
-            AnchorPane identification = (AnchorPane) loader.load();
+    public void showIdentification() throws IOException {
+        // Load identification.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
+        AnchorPane identification = loader.load();
 
-            // Set recipe into the center of root layout.
-            root.setCenter(identification);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Set idenfication into the center of root layout.
+        root.setCenter(identification);
     }
+    
     /**
      * @param args the command line arguments
      */

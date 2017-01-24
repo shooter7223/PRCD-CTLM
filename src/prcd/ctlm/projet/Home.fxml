@@ -6,24 +6,14 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.Controller">
-   <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-   </rowConstraints>
-   <children>
-      <Label text="Que voulez-vous faire ?" />
+<GridPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+    <Label  GridPane.rowIndex="0" text="Que voulez-vous faire ?" />
+    <GridPane GridPane.rowIndex="1">
       <Button mnemonicParsing="false" text="Consulter mes tâches" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="Ajouter une tâche" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="Terminer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="Prendre une tâche" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" text="Déléguer une tâche" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" text="Supprimer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-   </children>
+   </GridPane>
 </GridPane>

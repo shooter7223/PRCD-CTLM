@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="prcd.ctlm.projet.IdentificationController">
     <SplitPane dividerPositions="0.5">
         <GridPane>
         <Label text="Connexion" GridPane.rowIndex="0" />
@@ -17,7 +17,7 @@
         <TextField GridPane.rowIndex="2" />
         <Label text="Mot de passe" GridPane.rowIndex="3" />
         <TextField GridPane.rowIndex="4" />
-        <Button mnemonicParsing="false" text="Valider" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" text="Valider" onAction="#connection" GridPane.rowIndex="5" />
     </GridPane>
     <GridPane>
         <Label text="Inscription" GridPane.rowIndex="0" />

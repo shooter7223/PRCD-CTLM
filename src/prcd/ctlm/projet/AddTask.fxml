@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Ajouter une tâche" GridPane.rowIndex="0" />
+    <GridPane GridPane.rowIndex="1">
+        <Label text="Nom" />
+        <TextArea GridPane.columnIndex="1" />
+        <Label text="Description" GridPane.rowIndex="1" />
+        <TextArea GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Priorité" GridPane.rowIndex="2" />
+        <GridPane GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <RadioButton mnemonicParsing="false" text="Faible" GridPane.columnIndex="0"/>
+            <RadioButton mnemonicParsing="false" text="Moyenne" GridPane.columnIndex="1"/>
+            <RadioButton mnemonicParsing="false" text="Élevée" GridPane.columnIndex="2"/>
+        </GridPane>
+        <Label text="État" GridPane.rowIndex="3" />
+        <GridPane GridPane.rowIndex="3" GridPane.columnIndex="1">
+            <RadioButton mnemonicParsing="false" text="À créer" GridPane.columnIndex="0"/>
+            <RadioButton mnemonicParsing="false" text="À reprendre" GridPane.columnIndex="1"/>
+        </GridPane>
+        <Label text="Fin" GridPane.rowIndex="4" />
+        <TextArea GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+    <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra orci et lectus rutrum elementum. Integer ullamcorper eget nunc et pellentesque. Praesent semper ligula quis tincidunt faucibus. Proin vehicula scelerisque neque, vel placerat diam volutpat at. Pellentesque dapibus sem id augue imperdiet vulputate. Fusce a semper lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur eu porta turpis, sit amet auctor neque. Etiam lacinia arcu vel viverra maximus. Aenean augue ex," GridPane.rowIndex="2" />
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
