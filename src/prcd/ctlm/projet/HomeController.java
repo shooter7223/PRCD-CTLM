@@ -17,39 +17,16 @@ import javafx.stage.Stage;
  * @author Thomas Caspar and Thérésien Esberard
  */
 public class HomeController {
-        
-    @FXML
-    private void viewTasks(ActionEvent e) throws IOException{
-        Stage stage; 
-        VBox viewTasks;
-     
-        // get reference to the button's stage to stay at the same page
-        stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        
-        // load up ViewTasks.fxml
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("ViewTasks.fxml"));
-        viewTasks = loader.load();
-        Scene scene = new Scene(viewTasks);
-        stage.setScene(scene);
-        stage.show();
-    }
+    CTLMProject ctlm = new CTLMProject();
     
     @FXML
     private void addTask(ActionEvent e) throws IOException{
-        Stage stage; 
-        GridPane addTask;
-     
-        // get reference to the button's stage to stay at the same page
-        stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        
-        // load up AddTask.fxml
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("AddTask.fxml"));
-        addTask = loader.load();
-        Scene scene = new Scene(addTask);
-        stage.setScene(scene);
-        stage.show();
+        ctlm.addTask(e);
+    }
+    
+    @FXML
+    private void viewTasks(ActionEvent e) throws IOException{
+        ctlm.viewTasks(e);
     }
     
     public void initialize(URL url, ResourceBundle rb) {

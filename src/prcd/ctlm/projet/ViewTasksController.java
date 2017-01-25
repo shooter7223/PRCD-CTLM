@@ -11,12 +11,18 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- *
+/*
  * @author Thomas Caspar and Thérésien Esberard
  */
+
 public class ViewTasksController {
-        
+    CTLMProject ctlm = new CTLMProject();
+    
+    @FXML
+    private void goHome(ActionEvent e) throws IOException{
+        ctlm.goHome(e);
+    }
+    
     @FXML
     private void dummy(ActionEvent e) throws IOException{
         //ctlm.showHome();
