@@ -6,16 +6,26 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+
 /**
  *
  * @author Thomas Caspar and Thérésien Esberard
  */
 public class IdentificationController {
-    CTLMProject ctlm = new CTLMProject();
+
+    private CTLMProject ctlm = new CTLMProject();;
+    private MultieClient client = new MultieClient() ;
+    
+    @FXML
+    private TextField identifiantBox, mdpBox;
+    
     
     @FXML
     private void connection(ActionEvent e) throws IOException{
+        
+        client.clientLog(identifiantBox.getText(), mdpBox.getText(), "n");
         ctlm.goHome(e);
+
     }
     
     public void initialize(URL url, ResourceBundle rb) {
