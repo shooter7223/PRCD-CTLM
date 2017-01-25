@@ -2,11 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<GridPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.HomeController">
+<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.HomeController">
     <Label  GridPane.rowIndex="0" text="Que voulez-vous faire ?" />
     <GridPane GridPane.rowIndex="1">
       <Button mnemonicParsing="false" text="Consulter mes tâches" onAction="#viewTasks" GridPane.rowIndex="1" />
@@ -16,4 +15,4 @@
       <Button mnemonicParsing="false" text="Déléguer une tâche" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" text="Supprimer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="2" />
    </GridPane>
-</GridPane>
+</VBox>
