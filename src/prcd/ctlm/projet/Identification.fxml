@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="prcd.ctlm.projet.IdentificationController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.IdentificationController">
     <SplitPane dividerPositions="0.5">
         <GridPane>
         <Label text="Connexion" GridPane.rowIndex="0" />

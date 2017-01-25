@@ -6,7 +6,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.ViewTasksController">
-    <Label GridPane.rowIndex="0" text="Que voulez-vous faire ?" />
+    <Button text="Accueil" onAction="#goHome" />
+    <Label GridPane.rowIndex="0" text="Mes tâches à faire" />
     <GridPane GridPane.rowIndex="1">
       <Button mnemonicParsing="false" text="Dummy" onAction="#dummy" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="Task" onAction="#task" GridPane.columnIndex="1" GridPane.rowIndex="1" />
