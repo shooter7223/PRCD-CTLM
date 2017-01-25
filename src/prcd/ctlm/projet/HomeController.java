@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -21,7 +22,7 @@ public class HomeController {
     private void viewTasks(ActionEvent e) throws IOException{
         //ctlm.showHome();
         Stage stage; 
-        GridPane addTask;
+        VBox viewTasks;
      
         // get reference to the button's stage to stay at the same page
         stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
@@ -29,8 +30,8 @@ public class HomeController {
         //load up OTHER FXML document
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(CTLMProject.class.getResource("ViewTasks.fxml"));
-        addTask = loader.load();
-        Scene scene = new Scene(addTask);
+        viewTasks = loader.load();
+        Scene scene = new Scene(viewTasks);
         stage.setScene(scene);
         stage.show();
     }

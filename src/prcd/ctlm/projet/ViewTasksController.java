@@ -47,7 +47,7 @@ public class ViewTasksController {
         
         //load up OTHER FXML document
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("AddTask.fxml"));
+        loader.setLocation(CTLMProject.class.getResource("Task.fxml"));
         addTask = loader.load();
         Scene scene = new Scene(addTask);
         stage.setScene(scene);

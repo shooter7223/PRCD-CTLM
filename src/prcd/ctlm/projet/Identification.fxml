@@ -29,7 +29,7 @@
         <TextField GridPane.rowIndex="6" />
         <Label text="Mot de passe" GridPane.rowIndex="7" />
         <TextField GridPane.rowIndex="8" />
-        <Button mnemonicParsing="false" text="Valider" GridPane.rowIndex="9" />
+        <Button mnemonicParsing="false" text="Valider" onAction="#connection" GridPane.rowIndex="9" />
     </GridPane>
 </SplitPane>
 </AnchorPane>
