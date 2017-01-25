@@ -25,7 +25,7 @@ public class IdentificationController {
     private void connection(ActionEvent e) throws IOException{
         //ctlm.showHome();
         Stage stage; 
-        BorderPane root;
+        GridPane home;
      
         // get reference to the button's stage
         // rester sur la même page
@@ -33,21 +33,11 @@ public class IdentificationController {
         
         //load up OTHER FXML document
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("Root.fxml"));
-        root = loader.load();
-      
-        //create a new scene with root and set the stage
-        Scene scene = new Scene(root);
+        loader.setLocation(CTLMProject.class.getResource("Home.fxml"));
+        home = loader.load();
+        Scene scene = new Scene(home);
         stage.setScene(scene);
         stage.show();
-      
-        // Load home.
-        FXMLLoader loader2 = new FXMLLoader();
-        loader2.setLocation(CTLMProject.class.getResource("Home.fxml"));
-        GridPane home = loader2.load();
-
-        // Set home into the center of root layout.
-        root.setCenter(home);
     }
     
     public void initialize(URL url, ResourceBundle rb) {
