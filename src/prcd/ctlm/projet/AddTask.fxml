@@ -28,13 +28,4 @@
         <Label text="Fin" GridPane.rowIndex="4" />
         <TextArea GridPane.columnIndex="1" GridPane.rowIndex="4" />
     </GridPane>
-    <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra orci et lectus rutrum elementum. Integer ullamcorper eget nunc et pellentesque. Praesent semper ligula quis tincidunt faucibus. Proin vehicula scelerisque neque, vel placerat diam volutpat at. Pellentesque dapibus sem id augue imperdiet vulputate. Fusce a semper lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur eu porta turpis, sit amet auctor neque. Etiam lacinia arcu vel viverra maximus. Aenean augue ex," GridPane.rowIndex="2" />
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
 </GridPane>

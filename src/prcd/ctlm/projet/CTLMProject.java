@@ -10,8 +10,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -24,7 +22,7 @@ public class CTLMProject extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("CTLM");
+        this.primaryStage.setTitle("The Collaborative Todo List Manager");
         
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
@@ -33,29 +31,6 @@ public class CTLMProject extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    /**
-     * Shows the home inside the root.
-     * @throws java.io.IOException
-     */
-    /*public void showHome() throws IOException {
-        // Load home.
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("Home.fxml"));
-        GridPane home = loader.load();
-
-        // Set home into the center of root layout.
-        root.setCenter(home);
-    }*/
-    
-    /*public void showIdentification() throws IOException {
-        // Load identification.
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
-        AnchorPane identification = loader.load();
-
-        // Set idenfication into the center of root layout.
-        root.setCenter(identification);
-    }*/
     
     /**
      * @param args the command line arguments
