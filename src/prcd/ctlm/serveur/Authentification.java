@@ -86,7 +86,14 @@ public class Authentification implements Runnable {
 				System.out.println(login +" vient de se connecter ");
 				out.flush();
 				authentifier = true;	
-			}
+                            }
+                            else
+                            {
+                                out.println("nonconnecte");
+				System.out.println(login +" vient de se connecter ");
+				out.flush();
+				authentifier = false;
+                            }
                             
                         }
                         

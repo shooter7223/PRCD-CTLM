@@ -21,6 +21,7 @@ public class Connexion implements Runnable {
 	private BufferedReader in = null;
 	private Scanner sc = null;
 	private boolean connect = false;
+        public boolean connectServer = false;
 	
 	public Connexion(Socket s){
 		
@@ -99,10 +100,14 @@ public class Connexion implements Runnable {
 			
 		System.out.println("Je suis connecté "); 
 		connect = true;
-		  }
+                connectServer = true;
+                
+		}
 		
 		else {
 			System.err.println("Vos informations sont incorrectes "); 
+                        connect = true;
+                        connectServer = false;
 		  }
 		
 	}
@@ -112,6 +117,7 @@ public class Connexion implements Runnable {
 			
 			System.err.println("Le serveur ne répond plus ");
 		}
+                System.out.println("Sortie du thread "); 
 	}
 
 }
