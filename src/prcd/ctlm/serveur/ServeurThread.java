@@ -3,52 +3,47 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package prcd.ctlm.serveur;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- *
- * @author thoma
- */
-public class ServeurThread extends Thread {
-    protected Socket socket;
+import java.io.*;
+import java.net.*;
 
-    public ServeurThread(Socket clientSocket) {
-        this.socket = clientSocket;
-    }
 
-    public void run() {
-        InputStream inp = null;
-        BufferedReader brinp = null;
-        DataOutputStream out = null;
-        try {
-            inp = socket.getInputStream();
-            brinp = new BufferedReader(new InputStreamReader(inp));
-            out = new DataOutputStream(socket.getOutputStream());
-        } catch (IOException e) {
-            return;
-        }
-        String line;
-        while (true) {
-            try {
-                line = brinp.readLine();
-                if ((line == null) || line.equalsIgnoreCase("QUIT")) {
-                    socket.close();
-                    return;
-                } else {
-                    out.writeBytes(line + "\n\r");
-                    out.flush();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                return;
-            }
-        }
-    }
+public class ServeurThread implements Runnable{
+
+	private ServerSocket socketserver = null;
+	private Socket socket = null;
+
+	public Thread t1;
+	public ServeurThread(ServerSocket ss){
+	 socketserver = ss;
+	}
+	
+	public void run() {
+		
+		try {
+			while(true){
+				
+			socket = socketserver.accept();
+			System.out.println("Nouvelle connextion");
+			
+			t1 = new Thread(new Authentification(socket));
+			t1.start();
+			
+			}
+		} catch (IOException e) {
+			
+			System.err.println("Erreur serveur");
+		}
+		
+	}
 }

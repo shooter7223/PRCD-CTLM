@@ -3,38 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package prcd.ctlm.serveur;
 
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 
-/**
- *
- * @author thoma
- */
 public class Serveur {
-     static final int PORT = 1978;
+ public static ServerSocket ss = null;
+ public static Thread t;
 
-    public static void main(String args[]) {
-        ServerSocket serverSocket = null;
-        Socket socket = null;
+ 
+	public static void main(String[] args) {
+		
+		try {
+			ss = new ServerSocket(2009);
+			System.out.println("Le serveur est à l'écoute du port "+ss.getLocalPort());
+			
+			t = new Thread(new ServeurThread(ss));
+			t.start();
+			
+		} catch (IOException e) {
+			System.err.println("Le port "+ss.getLocalPort()+" est déjà utilisé !");
+		}
+	
+	}
 
-        try {
-            serverSocket = new ServerSocket(PORT);
-        } catch (IOException e) {
-            e.printStackTrace();
-
-        }
-        while (true) {
-            try {
-                socket = serverSocket.accept();
-            } catch (IOException e) {
-                System.out.println("I/O error: " + e);
-            }
-            // new threa for a client
-            new ServeurThread(socket).start();
-        }
-    }
-    
-}
+	
+	}
