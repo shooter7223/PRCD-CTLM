@@ -8,11 +8,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-
-/**
- *
+/*
  * @author Thomas Caspar and Thérésien Esberard
  */
+
 public class IdentificationController {
 
     private CTLMProject ctlm = new CTLMProject();
@@ -37,7 +36,7 @@ public class IdentificationController {
         }
 
     }
-    
+        
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    

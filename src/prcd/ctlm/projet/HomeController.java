@@ -5,17 +5,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-/**
- *
+/*
  * @author Thomas Caspar and Thérésien Esberard
  */
+
 public class HomeController {
     CTLMProject ctlm = new CTLMProject();
     
@@ -27,6 +21,22 @@ public class HomeController {
     @FXML
     private void viewTasks(ActionEvent e) throws IOException{
         ctlm.viewTasks(e);
+    }
+    
+    public void finishTask(ActionEvent e) throws IOException{
+        ctlm.finishTask(e);
+    }
+    
+    public void takeTask(ActionEvent e) throws IOException{
+        ctlm.takeTask(e);
+    }
+    
+    public void attributeTask(ActionEvent e) throws IOException{
+        ctlm.attributeTask(e);
+    }
+    
+    public void deleteTask(ActionEvent e) throws IOException{
+        ctlm.deleteTask(e);
     }
     
     public void initialize(URL url, ResourceBundle rb) {
