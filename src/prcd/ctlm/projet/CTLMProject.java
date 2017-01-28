@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package prcd.ctlm.projet;
 
 import java.io.IOException;
@@ -12,8 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -23,65 +16,60 @@ public class CTLMProject extends Application {
     private Parent parent;
     private Stage primaryStage;
 
+    public void load(String file, Stage stage) throws IOException {        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(CTLMProject.class.getResource(file));
+        parent = loader.load();
+        Scene scene = new Scene(parent, 500, 500);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("The Collaborative Todo List Manager");
-        
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("Identification.fxml"));
-        parent = loader.load();
-        Scene scene = new Scene(parent, 500, 500);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        load("Identification.fxml", primaryStage);
     }
     
     public void goHome(ActionEvent e) throws IOException{
-        Stage stage; 
-        VBox home;
-     
-        // get reference to the button's stage to stay at the same page
-        stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        
-        //load up OTHER FXML document
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("Home.fxml"));
-        home = loader.load();
-        Scene scene = new Scene(home);
-        stage.setScene(scene);
-        stage.show();
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("Home.fxml", stage);
     }
     
     public void viewTasks(ActionEvent e) throws IOException {
-        Stage stage; 
-        VBox viewTasks;
-     
-        // get reference to the button's stage to stay at the same page
-        stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        
-        //load up OTHER FXML document
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("ViewTasks.fxml"));
-        viewTasks = loader.load();
-        Scene scene = new Scene(viewTasks);
-        stage.setScene(scene);
-        stage.show();
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("ViewTasks.fxml", stage);
     }
     
     public void addTask(ActionEvent e) throws IOException{
-        Stage stage; 
-        GridPane addTask;
-     
-        // get reference to the button's stage to stay at the same page
-        stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        
-        // load up AddTask.fxml
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("AddTask.fxml"));
-        addTask = loader.load();
-        Scene scene = new Scene(addTask);
-        stage.setScene(scene);
-        stage.show();
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("AddTask.fxml", stage);
+    }
+    
+    public void finishTask(ActionEvent e) throws IOException{
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("FinishTask.fxml", stage);
+    }
+    
+    public void takeTask(ActionEvent e) throws IOException{
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("TakeTask.fxml", stage);
+    }
+    
+    public void attributeTask(ActionEvent e) throws IOException{
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("AttributeTask.fxml", stage);
+    }
+    
+    public void deleteTask(ActionEvent e) throws IOException{
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("DeleteTask.fxml", stage);
+    }
+    
+    public void dummy(ActionEvent e) throws IOException{
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("Dummy.fxml", stage);
     }
     
     /**

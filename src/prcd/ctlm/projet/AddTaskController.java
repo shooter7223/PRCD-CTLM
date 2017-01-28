@@ -5,17 +5,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 /**
  * @author Thomas Caspar and Thérésien Esberard
  */
 
-public class TaskController {
+public class AddTaskController {
     CTLMProject ctlm = new CTLMProject();
     
     @FXML
@@ -24,12 +19,7 @@ public class TaskController {
     }
     
     @FXML
-    private void viewTasks(ActionEvent e) throws IOException{
-        ctlm.viewTasks(e);
-    }
-    
-    @FXML
-    private void finish(ActionEvent e) throws IOException{
+    private void create(ActionEvent e) throws IOException{
         ctlm.viewTasks(e);
     }
     
