@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.HomeController">
-    <Label GridPane.rowIndex="0" text="Que vais-je faire aujourd'hui ?" />
-    <GridPane GridPane.rowIndex="1">
+    <Label styleClass="title" text="Que vais-je faire aujourd'hui ?" />
+    <GridPane>
       <Button mnemonicParsing="false" text="Consulter mes tâches" onAction="#viewTasks" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="Ajouter une tâche" onAction="#addTask" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Terminer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Prendre une tâche" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Déléguer une tâche" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Supprimer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" text="Terminer une tâche" onAction="#finishTask" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" text="Prendre une tâche" onAction="#takeTask" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" text="Déléguer une tâche" onAction="#attributeTask" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" text="Supprimer une tâche" onAction="#deleteTask" GridPane.columnIndex="2" GridPane.rowIndex="2" />
    </GridPane>
 </VBox>

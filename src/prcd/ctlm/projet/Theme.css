@@ -1,6 +1,15 @@
 .CTLM {
-    -fx-background-color: #E0CDA9;
+    -fx-background-color: #008080;
     -fx-padding: 10px;
     -fx-font-family: Raleway;
     -fx-font-size: 10pt;
+    -fx-text-fill: white;
+    }
+    
+.title {
+    -fx-background-color: #80C0C0;
+    -fx-padding: 10px;
+    -fx-font-family: "Raleway ExtraBold", Arial;
+    -fx-font-size: 20pt;
+    -fx-text-fill: white;
     }
