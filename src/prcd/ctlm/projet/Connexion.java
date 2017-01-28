@@ -16,7 +16,7 @@ public class Connexion implements Runnable {
         private String mdp = null;
         private String user = null;
 	public static Thread t2;
-	public static String login = null, pass = null, message1 = null, message2 = null, message3 = null, nom = null, prenom = null, mail = null;
+	public static String message1 = null, message2 = null, message3 = null, nom = null, prenom = null, mail = null;
 	private PrintWriter out = null;
 	private BufferedReader in = null;
 	private Scanner sc = null;
@@ -32,6 +32,16 @@ public class Connexion implements Runnable {
 		socket = s;
                 log = log_;
                 mdp = mdp_;
+                user = user_;
+	}
+        public Connexion(Socket s, String log_, String nom_, String prenom_ , String mail_, String mdp_ , String user_){
+		
+		socket = s;
+                log = log_;
+                mdp = mdp_;
+                mail = mail_;
+                nom = nom_;
+                prenom = prenom_;
                 user = user_;
 	}
 	
@@ -66,27 +76,27 @@ public class Connexion implements Runnable {
                 else 
                 {
                     System.out.println(in.readLine());
-                    login = sc.nextLine();
-                    out.println(login);
+                    //login = sc.nextLine();
+                    out.println(log);
                     out.flush();
                     
                     System.out.println(in.readLine());
-                    pass = sc.nextLine();
-                    out.println(pass);
+                    //pass = sc.nextLine();
+                    out.println(mdp);
                     out.flush();
                     
                     System.out.println(in.readLine());
-                    nom = sc.nextLine();
+                    //nom = sc.nextLine();
                     out.println(nom);
                     out.flush();
                     
                     System.out.println(in.readLine());
-                    prenom = sc.nextLine();
+                    //prenom = sc.nextLine();
                     out.println(prenom);
                     out.flush();
                     
                     System.out.println(in.readLine());
-                    mail = sc.nextLine();
+                    //mail = sc.nextLine();
                     out.println(mail);
                     out.flush();
                     
