@@ -1,7 +1,7 @@
 .CTLM {
     -fx-background-color: #008080;
     -fx-padding: 10px;
-    -fx-font-family: Raleway;
+    -fx-font-family: Raleway, "Segoe UI";
     -fx-font-size: 10pt;
     -fx-text-fill: white;
     }
@@ -9,11 +9,11 @@
 .title {
     -fx-background-color: #80C0C0;
     -fx-padding: 10px;
-    -fx-font-family: "Raleway ExtraBold", Arial;
+    -fx-font-family: "Raleway ExtraBold", "Segoe UI Semibold";
     -fx-font-size: 20pt;
     -fx-text-fill: white;
     }
-
+    
 .label{
     -fx-text-fill: white;
 }
@@ -30,14 +30,10 @@
     -fx-text-fill: teal;
 }
 
-.button:default:hover {
-    -fx-background-color: derive(-fx-focus-color,30%);
-}
-
 .home {
     -fx-padding-top: 10px;
 }
 
-.home .button {
-    -fx-pref-tile-width: 300px;
+.attributeTask .label {
+    -fx-padding: 5px 10px 5px 0;
 }

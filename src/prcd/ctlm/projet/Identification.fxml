@@ -24,7 +24,7 @@
             <Insets top="10.0" />
          </VBox.margin></Button>
     </VBox>
-   <Line endY="275.0" stroke="WHITE">
+   <Line endY="325" stroke="WHITE">
       <HBox.margin>
          <Insets left="10.0" right="10.0" />
       </HBox.margin>
@@ -45,6 +45,10 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
+        <TextField />
+        <Label text="Identifiant">
+            <VBox.margin><Insets top="5.0" /></VBox.margin>
+        </Label>
         <TextField />
         <Label text="Mot de passe">
          <VBox.margin>
