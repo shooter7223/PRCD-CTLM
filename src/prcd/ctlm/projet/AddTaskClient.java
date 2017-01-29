@@ -22,19 +22,22 @@ import static prcd.ctlm.projet.Connexion.prenom;
 public class AddTaskClient implements Runnable {
 
 	private Socket socket = null;
-        private String idT = null, idU = null, titre = null, p = null , d = null;
+        private String idT = null, idU = null, titre = null, p = null , d = null, dc = null, df = null;
         private PrintWriter out = null;
 	private BufferedReader in = null;
         private boolean connect = false;
         
-        public AddTaskClient(Socket s, String idT_, String idU_, String titre_, String p_, String d_ ){
+        public AddTaskClient(Socket s, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_){
 		
 		socket = s;
                 idT = idT_;
                 idU = idU_;
                 titre = titre_;
+                dc = dc_;
+                df = df_;
                 p = p_;
                 d = d_;
+                
 	}
         
         
@@ -65,6 +68,16 @@ public class AddTaskClient implements Runnable {
                 System.out.println(in.readLine());
 		//user = sc.nextLine();
 		out.println(p);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(dc);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(df);
 		out.flush();
                 
                  System.out.println(in.readLine());

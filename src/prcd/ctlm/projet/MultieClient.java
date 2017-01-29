@@ -15,6 +15,8 @@ public class MultieClient {
 	public static Thread t1;
         public Connexion connect;
         public AddTaskClient addTache;
+        public ListTaskUser listTacheUser;
+        public String Utilisateur = null;
         private PrintWriter out = null;
 	private BufferedReader in = null;
 	private Scanner sc = null;
@@ -23,7 +25,7 @@ public class MultieClient {
 	
 		
 	try {
-		
+		Utilisateur = login;
 		System.out.println("Demande de connexion");
 		socket = new Socket("127.0.0.1",2009);
 		System.out.println("Connexion établie avec le serveur, authentification :"); // Si le message s'affiche c'est que je suis connecté
@@ -83,7 +85,7 @@ public class MultieClient {
 
 	}
         
-        public void clientAddT(String idT, String idU, String titre, String description, String prio) throws InterruptedException {
+        public void clientAddT(String idT, String idU, String titre, String description, String dc, String df, String prio) throws InterruptedException {
 	
 		
 	try {
@@ -100,7 +102,39 @@ public class MultieClient {
 		out.println("addT");
                 out.flush();
 		
-		t1 = new Thread(addTache = new AddTaskClient(socket, idT, idU, titre, description, prio));
+		t1 = new Thread(addTache = new AddTaskClient(socket, idT, idU, titre, description, dc, df, prio));
+		t1.start();
+		
+		
+		
+	} catch (UnknownHostException e) {
+	  System.err.println("Impossible de se connecter à l'adresse "+socket.getLocalAddress());
+	} catch (IOException e) {
+	  System.err.println("Aucun serveur à l'écoute du port "+socket.getLocalPort());
+	}
+	
+	
+
+	}
+        
+        public void clientList(String idU) throws InterruptedException {
+	
+		
+	try {
+		
+		System.out.println("Demande de connexion");
+		socket = new Socket("127.0.0.1",2009);
+		System.out.println("Connexion établie avec le serveur, authentification :"); // Si le message s'affiche c'est que je suis connecté
+                
+                out = new PrintWriter(socket.getOutputStream());
+		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));	
+		sc = new Scanner(System.in);
+                
+                System.out.println(in.readLine());
+		out.println("lisT");
+                out.flush();
+		
+		t1 = new Thread(listTacheUser = new ListTaskUser(socket, idU));
 		t1.start();
 		
 		

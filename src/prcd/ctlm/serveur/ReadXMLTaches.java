@@ -17,9 +17,12 @@ import org.xml.sax.helpers.DefaultHandler;
 public class ReadXMLTaches {
     boolean idTest = false;
     boolean accept = false;
+    public List<String> listTache = new ArrayList<String>();
+    
+    public ReadXMLTaches(){}
    
-   public boolean read(String IdT_ , String IdU_) {
-    System.out.println("id : " + IdT_ + "pass : " + IdU_);
+   public boolean read(String idU_) {
+    System.out.println("id : " + idU_ );
     try {
 
 	SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -36,8 +39,22 @@ public class ReadXMLTaches {
 		if (qName.equalsIgnoreCase("Tache")) {
 			String idT = attributes.getValue("idT");
 			String idU = attributes.getValue("idU");
+                        String dateC = attributes.getValue("dateC");
+                        String dateF = attributes.getValue("dateF");
                         String titre = attributes.getValue("titre");
                         String priorite = attributes.getValue("priorite");
+                        
+                        if(idU.equals(idU_))
+                        {
+                            listTache.add("Id de la Tache : " + idT);
+                            listTache.add("Id de l'utilisateur : " + idU);
+                            listTache.add("Titre : " + titre);
+                            listTache.add("Date de Commensement : " + dateC);
+                            listTache.add("Date de Fin : " + dateF);
+                            listTache.add("Priotite : " + priorite);
+                            Tache = true;
+                        }
+                       
 		}
 	}
 
@@ -51,6 +68,7 @@ public class ReadXMLTaches {
 	public void characters(char ch[], int start, int length) throws SAXException {
                
 		if (Tache) {
+                        listTache.add("Description : " + new String (ch, start, length));
 			System.out.println(" " + new String (ch, start, length));
 			Tache = false;
 		}
