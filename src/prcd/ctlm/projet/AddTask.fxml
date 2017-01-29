@@ -13,9 +13,9 @@
     <Label styleClass="title" text="Ajouter une tâche" />
     <GridPane GridPane.rowIndex="1">
         <Label text="Nom" />
-        <TextArea GridPane.columnIndex="1" />
+        <TextArea fx:id="titreBox" GridPane.columnIndex="1" />
         <Label text="Description" GridPane.rowIndex="1" />
-        <TextArea GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextArea fx:id="descriptionBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <Label text="Priorité" GridPane.rowIndex="2" />
         <GridPane GridPane.rowIndex="2" GridPane.columnIndex="1">
             <RadioButton mnemonicParsing="false" text="Faible" GridPane.columnIndex="0"/>

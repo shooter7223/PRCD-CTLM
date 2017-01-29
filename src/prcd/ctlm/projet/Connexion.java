@@ -27,7 +27,7 @@ public class Connexion implements Runnable {
 		
 		socket = s;
 	}
-        public Connexion(Socket s, String log_, String mdp_, String user_){
+        public Connexion(Socket s, String log_, String mdp_, String user_ ){
 		
 		socket = s;
                 log = log_;
