@@ -67,6 +67,20 @@ public class CTLMProject extends Application {
         load("DeleteTask.fxml", stage);
     }
     
+    public void showUsersList() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        Stage stage = new Stage();
+
+        loader.setLocation(CTLMProject.class.getResource("UsersList.fxml"));
+        parent = loader.load();
+        Scene scene = new Scene(parent, 250, 250);
+        stage.setScene(scene);
+        stage.show();
+        
+        UsersListController controller = loader.getController();
+        controller.setDialogStage(stage);
+    }
+    
     public void dummy(ActionEvent e) throws IOException{
         Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
         load("Dummy.fxml", stage);
