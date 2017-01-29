@@ -1,3 +1,3 @@
 <root>
 
-<Tache idT="idTachen1" idU="idu2" titre="azaz" dateC="jj/mm/aaaa" dateF="jj/mm/aaaa"  priorite="p1" >azaz</Tache><Tache idT ="1" idU="az" titre="a faire" dateC="29/01/2017" dateF="01/02/2017" priorite="1">sdqfqsdfqsdfqsdfqsdfq</Tache><Tache idT ="1" idU="az" titre="a faire" dateC="29/01/2017" dateF="01/02/2017" priorite="1">sdqfqsdfqsdfqsdfqsdfq</Tache></root>
+<Tache idT="idTachen1" idU="idu2" titre="A faire" dateC="29/01/2017" dateF="29/01/2018"  priorite="p1" >A faire</Tache><Tache idT="idTachen1" idU="idu2" titre="azaz" dateC="jj/mm/aaaa" dateF="jj/mm/aaaa"  priorite="p1" >azaz</Tache><Tache idT ="1" idU="az" titre="a faire" dateC="29/01/2017" dateF="01/02/2017" priorite="1">sdqfqsdfqsdfqsdfqsdfq</Tache><Tache idT ="1" idU="az" titre="a faire" dateC="29/01/2017" dateF="01/02/2017" priorite="1">sdqfqsdfqsdfqsdfqsdfq</Tache></root>

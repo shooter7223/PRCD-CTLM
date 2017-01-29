@@ -20,7 +20,7 @@ public class AddTaskController {
     private TextArea descriptionBox;
     
     @FXML
-    private TextField titreBox;
+    private TextField titreBox, dC, dF;
     
     @FXML
     private void goHome(ActionEvent e) throws IOException{
@@ -29,7 +29,7 @@ public class AddTaskController {
     
     @FXML
     private void create(ActionEvent e) throws IOException, InterruptedException{
-        client.clientAddT("idTachen1","idu2", titreBox.getText(), descriptionBox.getText(),"jj/mm/aaaa","jj/mm/aaaa","p1" );
+        client.clientAddT("idTachen1","idu2", titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),"p1" );;
         Thread.sleep(500);
         ctlm.viewTasks(e);
     }
