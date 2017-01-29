@@ -25,7 +25,7 @@ public class AddTaskController {
     
     @FXML
     private void create(ActionEvent e) throws IOException, InterruptedException{
-        client.clientAddT("2", "toto", titreBox.getText(), descriptionBox.getText(), "2");
+        client.clientAddT("idTachen1","idu2", titreBox.getText(), descriptionBox.getText(),"jj/mm/aaaa","jj/mm/aaaa","p1" );
         Thread.sleep(500);
         ctlm.viewTasks(e);
     }

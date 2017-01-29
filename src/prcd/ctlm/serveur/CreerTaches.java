@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class CreerTaches {
     
-    public void NouvelleTache(String idT, String idU, String titre, String description, String prio) throws IOException
+    public void NouvelleTache(String idT, String idU, String titre, String description, String dateC, String dateF, String prio) throws IOException
     {        
         BufferedReader br = new BufferedReader(new FileReader("Taches.xml"));
         String line;
@@ -41,7 +41,7 @@ public class CreerTaches {
        
         
         
-        xml.write("<Tache idT=\"" + idT + "\" idU=\"" + idU + "\" titre=\"" + titre + "\" priorite=\"" + prio + "\" >" );
+        xml.write("<Tache idT=\"" + idT + "\" idU=\"" + idU + "\" titre=\"" + titre +"\" dateC=\""+ dateC+"\" dateF=\""+ dateF + "\"  priorite=\"" + prio + "\" >" );
          xml.write(description); 
         xml.write("</Tache>"); 
         

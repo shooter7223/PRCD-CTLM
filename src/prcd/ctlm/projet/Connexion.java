@@ -22,6 +22,7 @@ public class Connexion implements Runnable {
 	private Scanner sc = null;
 	private boolean connect = false;
         public boolean connectServer = false;
+        
 	
 	public Connexion(Socket s){
 		
