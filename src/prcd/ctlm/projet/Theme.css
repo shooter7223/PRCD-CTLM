@@ -34,6 +34,6 @@
     -fx-padding-top: 10px;
 }
 
-.attributeTask .label {
+.filledLabel .label {
     -fx-padding: 5px 10px 5px 0;
 }

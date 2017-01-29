@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -9,25 +10,34 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.TaskController">
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.DeleteTaskController">
     <Button onAction="#goHome" text="Accueil" />
-    <Label styleClass="title" text="Supprimer une tâche" />
-    <GridPane>
-        <Label text="Tâche 1" />
-        <CheckBox mnemonicParsing="false" contentDisplay="top" GridPane.columnIndex="1" />
-        <Label text="Tâche 2" GridPane.rowIndex="1" />
-        <CheckBox mnemonicParsing="false" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <Label styleClass="title" text="Supprimer une tâche">
+      <VBox.margin>
+         <Insets bottom="10" top="10.0" />
+      </VBox.margin></Label>
+    <GridPane styleClass="filledLabel" alignment="CENTER">
+      <Label text="Tâche 1" />
+      <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" />
+      <Label text="Tâche 2" GridPane.rowIndex="1" />
+      <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <Label text="Tâche 3" GridPane.rowIndex="2" />
-        <CheckBox mnemonicParsing="false" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+        <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         <Label text="Tâche 4" GridPane.rowIndex="3" />
-        <CheckBox mnemonicParsing="false" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+        <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         <Label text="Tâche 5" GridPane.rowIndex="4" />
-        <CheckBox mnemonicParsing="false" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+        <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
         <Label text="Tâche 6" GridPane.rowIndex="5" />
-        <CheckBox mnemonicParsing="false" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+        <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
     </GridPane>
-    <HBox>
+    <HBox alignment="CENTER">
         <Button onAction="#goHome" text="Annuler" />
-        <Button onAction="#goHome" text="Valider" />
+        <Button onAction="#finish" text="Valider">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin></Button>
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
     </HBox>
 </VBox>
