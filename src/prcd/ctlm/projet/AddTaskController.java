@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 
 /**
  * @author Thomas Caspar and Thérésien Esberard
@@ -12,6 +13,10 @@ import javafx.fxml.FXML;
 
 public class AddTaskController {
     CTLMProject ctlm = new CTLMProject();
+    private MultieClient client = new MultieClient() ;
+    
+    @FXML
+    private TextArea titreBox, descriptionBox;
     
     @FXML
     private void goHome(ActionEvent e) throws IOException{
@@ -19,7 +24,9 @@ public class AddTaskController {
     }
     
     @FXML
-    private void create(ActionEvent e) throws IOException{
+    private void create(ActionEvent e) throws IOException, InterruptedException{
+        client.clientAddT("2", "toto", titreBox.getText(), descriptionBox.getText(), "2");
+        Thread.sleep(500);
         ctlm.viewTasks(e);
     }
     

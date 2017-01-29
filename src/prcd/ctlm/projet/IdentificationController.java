@@ -18,15 +18,29 @@ public class IdentificationController {
     private MultieClient client = new MultieClient() ;
     
     @FXML
-    private TextField identifiantBox, mdpBox;
+    private TextField identifiantBox, mdpBox, iid, inom, iprenom, imail, imdp;
     
     @FXML
     private Label ConnexionOK = new Label();
     
     @FXML
-    private void connection(ActionEvent e) throws IOException, InterruptedException{
+    private void connexion(ActionEvent e) throws IOException, InterruptedException{
         
         client.clientLog(identifiantBox.getText(), mdpBox.getText(), "n");
+        Thread.sleep(500);
+        //System.out.println(client.connect.connect);
+        if(client.connect.connectServer)ctlm.goHome(e);
+        else 
+        {
+            ConnexionOK.setText("Identifiant ou mot de passe Incorrecte");
+        }
+
+    }
+    
+    @FXML
+    private void inscription(ActionEvent e) throws IOException, InterruptedException{
+        
+        client.clientIns(iid.getText(), inom.getText(), iprenom.getText(), imail.getText(), imdp.getText(),  "y");
         Thread.sleep(500);
         //System.out.println(client.connect.connect);
         if(client.connect.connectServer)ctlm.goHome(e);

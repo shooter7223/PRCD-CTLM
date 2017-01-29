@@ -114,29 +114,8 @@ public class Authentification implements Runnable {
                 
                 if(user.read(login, pass))connexion = true;
                 else connexion = false;
-                
-                /*if(login.equals("1") && pass.equals("toto"))
-                {
-                    connexion = true;
-                }*/
-                
-                
-                
-		/*try {
-			Scanner sc = new Scanner(new File("zero.txt"));
-			
-			
-			while(sc.hasNext()){
-				if(sc.nextLine().equals(login+" "+pass)){
-              	  connexion=true;
-				  break;
-				}
-             }
-			
-		} catch (FileNotFoundException e) {	
-			System.err.println("Le fichier n'existe pas !");
-		}*/
-	return connexion;
+            
+                return connexion;
 		
 	}
 

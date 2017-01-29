@@ -36,7 +36,7 @@ public class ServeurThread implements Runnable{
 			socket = socketserver.accept();
 			System.out.println("Nouvelle connextion");
 			
-			t1 = new Thread(new Authentification(socket));
+			t1 = new Thread(new ServeurCommande(socket));
 			t1.start();
 			
 			}
