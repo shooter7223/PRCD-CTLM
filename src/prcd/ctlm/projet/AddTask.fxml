@@ -30,6 +30,8 @@
         </HBox>
         <Label text="Fin" GridPane.rowIndex="4" />
         <TextArea GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button text="Attribuer" onAction="#attributeTo" GridPane.rowIndex="5" />
+        <Label text="Machin" GridPane.columnIndex="1" GridPane.rowIndex="5" />
     </GridPane>
     <HBox>
         <Button text="Annuler" onAction="#goHome" />

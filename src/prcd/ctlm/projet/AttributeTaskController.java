@@ -29,7 +29,7 @@ public class AttributeTaskController {
     }
     
     @FXML
-    private void attibuteTo() throws IOException{
+    private void attributeTo() throws IOException{
         ctlm.showUsersList();
     }
     

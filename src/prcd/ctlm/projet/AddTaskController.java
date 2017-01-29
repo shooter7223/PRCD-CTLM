@@ -23,6 +23,11 @@ public class AddTaskController {
         ctlm.viewTasks(e);
     }
     
+    @FXML
+    private void attributeTo() throws IOException{
+        ctlm.showUsersList();
+    }
+    
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
