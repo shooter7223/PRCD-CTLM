@@ -50,6 +50,7 @@ public class ViewTasksController {
         Scene scene = new Scene(task);
         stage.setScene(scene);
         stage.show();
+        
     }
     
   
