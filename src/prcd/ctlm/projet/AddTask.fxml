@@ -49,11 +49,7 @@
             </RadioButton>
             <GridPane.margin><Insets bottom="5.0" left="10.0" top="5.0" /></GridPane.margin>
         </HBox>
-        <Label maxWidth="1.7976931348623157E308" text="Debut fin" GridPane.rowIndex="4" />
-        <TextField maxHeight="125.0" maxWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets bottom="5.0" left="10.0" top="5.0" />
-         </GridPane.margin></TextField>
+        <Label maxWidth="1.7976931348623157E308" text="Debut/Fin" GridPane.rowIndex="4" />
         <Button onAction="#attributeTo" text="Attribuer à" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets top="5.0" />
@@ -62,6 +58,13 @@
          <GridPane.margin>
             <Insets left="10.0" top="5.0" />
          </GridPane.margin></Text>
+      <HBox prefHeight="33.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <TextField fx:id="dC" prefHeight="30.0" prefWidth="146.0" />
+            <Label prefHeight="20.0" prefWidth="22.0" text="/" />
+            <TextField fx:id="dF" />
+         </children>
+      </HBox>
       <columnConstraints>
          <ColumnConstraints />
          <ColumnConstraints />
