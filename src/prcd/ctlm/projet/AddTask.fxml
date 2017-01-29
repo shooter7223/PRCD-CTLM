@@ -1,40 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.AddTaskController">
-    <Button text="Accueil" onAction="#goHome" />
-    <Label styleClass="title" text="Ajouter une tâche" />
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.AddTaskController">
+    <Button onAction="#goHome" text="Accueil" />
+    <Label styleClass="title" text="Ajouter une tâche">
+      <VBox.margin>
+         <Insets bottom="10.0" top="10.0" />
+      </VBox.margin></Label>
     <GridPane GridPane.rowIndex="1">
-        <Label text="Nom" />
-        <TextField GridPane.columnIndex="1" />
-        <Label text="Description" GridPane.rowIndex="1" />
-        <TextArea GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label maxWidth="1.7976931348623157E308" text="Nom" />
+        <TextField GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" />
+         </GridPane.margin></TextField>
+        <Label maxWidth="1.7976931348623157E308" text="Description" GridPane.rowIndex="1" />
+        <TextArea maxHeight="125.0" maxWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </GridPane.margin></TextArea>
         <Label text="Priorité" GridPane.rowIndex="2" />
-        <GridPane GridPane.rowIndex="2" GridPane.columnIndex="1">
-            <RadioButton mnemonicParsing="false" text="Faible" GridPane.columnIndex="0"/>
-            <RadioButton mnemonicParsing="false" text="Moyenne" GridPane.columnIndex="1"/>
-            <RadioButton mnemonicParsing="false" text="Élevée" GridPane.columnIndex="2"/>
-        </GridPane>
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <RadioButton mnemonicParsing="false" text="Faible" textFill="WHITE" />
+        <RadioButton mnemonicParsing="false" text="Moyenne" textFill="WHITE">
+            <HBox.margin><Insets left="10.0" /></HBox.margin>
+        </RadioButton>
+        <RadioButton mnemonicParsing="false" text="Élevée" textFill="WHITE">
+            <HBox.margin><Insets left="10.0" /></HBox.margin>
+        </RadioButton>
+        <GridPane.margin><Insets left="10.0" /></GridPane.margin>
+    </HBox>
         <Label text="État" GridPane.rowIndex="3" />
-        <HBox GridPane.rowIndex="3" GridPane.columnIndex="1">
-            <RadioButton mnemonicParsing="false" text="À créer" />
-            <RadioButton mnemonicParsing="false" text="À reprendre" />
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <RadioButton mnemonicParsing="false" text="À créer" textFill="WHITE" />
+            <RadioButton mnemonicParsing="false" text="À reprendre" textFill="WHITE">
+                <HBox.margin><Insets left="10.0" /></HBox.margin>
+            </RadioButton>
+            <GridPane.margin><Insets bottom="5.0" left="10.0" top="5.0" /></GridPane.margin>
         </HBox>
-        <Label text="Fin" GridPane.rowIndex="4" />
-        <TextArea GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <Button text="Attribuer" onAction="#attributeTo" GridPane.rowIndex="5" />
-        <Label text="Machin" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Label maxWidth="1.7976931348623157E308" text="Fin" GridPane.rowIndex="4" />
+        <TextField maxHeight="125.0" maxWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </GridPane.margin></TextField>
+        <Button onAction="#attributeTo" text="Attribuer à" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin></Button>
+        <Text fill="WHITE" text="Machin" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="10.0" top="5.0" />
+         </GridPane.margin></Text>
     </GridPane>
-    <HBox>
-        <Button text="Annuler" onAction="#goHome" />
-        <Button text="Valider" onAction="#create" />
+    <HBox alignment="CENTER">
+        <Button onAction="#goHome" text="Annuler" />
+        <Button onAction="#create" text="Valider">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin></Button>
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
     </HBox>
 </VBox>
