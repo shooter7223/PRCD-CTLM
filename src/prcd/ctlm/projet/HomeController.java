@@ -39,6 +39,10 @@ public class HomeController {
         ctlm.deleteTask(e);
     }
     
+    public void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
+    }
+    
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    

@@ -18,15 +18,12 @@
         </columnConstraints>
         <Button onAction="#goHome" text="Accueil" />
         <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
-      <rowConstraints>
-         <RowConstraints />
-      </rowConstraints>
     </GridPane>
     <Label styleClass="title" text="Terminer une tâche">
       <VBox.margin>
          <Insets bottom="10" top="10.0" />
       </VBox.margin></Label>
-    <GridPane alignment="CENTER" styleClass="filledLabel">
+    <GridPane alignment="CENTER" styleClass="table">
       <Label text="Tâche 1" />
       <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" />
       <Label text="Tâche 2" GridPane.rowIndex="1" />

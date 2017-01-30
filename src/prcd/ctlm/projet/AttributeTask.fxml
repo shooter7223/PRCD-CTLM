@@ -22,7 +22,7 @@
          <Insets top="10.0" />
       </VBox.margin>
     </TextFlow>
-    <GridPane styleClass="filledLabel" alignment="CENTER">
+    <GridPane styleClass="table" alignment="CENTER">
         <Label text="Tâche 1"/>
         <Button contentDisplay="CENTER" text="Attribuer à" onAction="#attributeTo" GridPane.columnIndex="1">
             <GridPane.margin><Insets top="10.0" bottom="5" /></GridPane.margin>

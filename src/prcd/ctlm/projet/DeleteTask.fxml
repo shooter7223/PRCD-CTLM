@@ -19,7 +19,7 @@
       <VBox.margin>
          <Insets bottom="10" top="10.0" />
       </VBox.margin></Label>
-    <GridPane styleClass="filledLabel" alignment="CENTER">
+    <GridPane styleClass="table">
       <Label text="Tâche 1" />
       <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" />
       <Label text="Tâche 2" GridPane.rowIndex="1" />

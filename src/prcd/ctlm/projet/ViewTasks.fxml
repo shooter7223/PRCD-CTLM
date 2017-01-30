@@ -2,18 +2,26 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.ViewTasksController">
-    <Button text="Accueil" onAction="#goHome" />
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.ViewTasksController">
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button onAction="#goHome" text="Accueil" />
+        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
+    </GridPane>
     <Label styleClass="title" text="Mes tâches à faire" />
-    <GridPane GridPane.rowIndex="1">
-      <Button mnemonicParsing="false" text="Dummy" onAction="#dummy" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Task" onAction="#task" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Task" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Task" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Task" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Task" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-   </GridPane>
+   <ListView />
+   <GridPane>
+        <Button text="Achever" onAction="#finish" />
+        <Button text="Supprimer" onAction="#delete" GridPane.columnIndex="1" />
+        <Button text="Attribuer à" onAction="#attributeTo" GridPane.columnIndex="2" />
+    </GridPane>
 </VBox>
