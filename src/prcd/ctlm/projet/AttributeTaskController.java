@@ -33,6 +33,11 @@ public class AttributeTaskController {
         ctlm.showUsersList();
     }
     
+    @FXML
+    private void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
+    }
+    
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    

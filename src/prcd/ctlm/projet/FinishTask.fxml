@@ -10,13 +10,23 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.FinishTaskController">
-    <Button onAction="#goHome" text="Accueil" />
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.FinishTaskController">
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button onAction="#goHome" text="Accueil" />
+        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
     <Label styleClass="title" text="Terminer une tâche">
       <VBox.margin>
          <Insets bottom="10" top="10.0" />
       </VBox.margin></Label>
-    <GridPane styleClass="filledLabel" alignment="CENTER">
+    <GridPane alignment="CENTER" styleClass="filledLabel">
       <Label text="Tâche 1" />
       <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" />
       <Label text="Tâche 2" GridPane.rowIndex="1" />
@@ -29,6 +39,18 @@
         <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
         <Label text="Tâche 6" GridPane.rowIndex="5" />
         <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
     </GridPane>
     <HBox alignment="CENTER">
         <Button onAction="#goHome" text="Annuler" />

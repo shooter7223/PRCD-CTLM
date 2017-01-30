@@ -23,6 +23,11 @@ public class TakeTaskController {
         ctlm.goHome(e);
     }
     
+    @FXML
+    private void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
+    }
+    
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    

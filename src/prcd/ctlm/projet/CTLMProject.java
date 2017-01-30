@@ -67,6 +67,11 @@ public class CTLMProject extends Application {
         load("DeleteTask.fxml", stage);
     }
     
+    public void logOut(ActionEvent e) throws IOException{
+        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
+        load("Identification.fxml", stage);
+    }
+    
     public void showUsersList() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         Stage stage = new Stage();
