@@ -7,14 +7,18 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
 
-<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.AddTaskController">
-    <Button onAction="#goHome" text="Accueil" />
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.AddTaskController">
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button onAction="#goHome" text="Accueil" />
+        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
+    </GridPane>
     <Label styleClass="title" text="Ajouter une tâche">
       <VBox.margin>
          <Insets bottom="10.0" top="10.0" />

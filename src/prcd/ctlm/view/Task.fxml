@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.TaskController">
+<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.controller.TaskController">
     <GridPane>
         <Button text="Accueil" onAction="#goHome" />
         <Button text="Liste des tâches" onAction="#viewTasks" GridPane.columnIndex="1" />

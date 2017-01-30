@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prcd.ctlm.projet;
+package prcd.ctlm.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,9 +11,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
-import static prcd.ctlm.projet.Connexion.mail;
-import static prcd.ctlm.projet.Connexion.nom;
-import static prcd.ctlm.projet.Connexion.prenom;
+import static prcd.ctlm.client.Connexion.mail;
+import static prcd.ctlm.client.Connexion.nom;
+import static prcd.ctlm.client.Connexion.prenom;
 
 /**
  *

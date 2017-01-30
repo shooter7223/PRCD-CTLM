@@ -1,5 +1,6 @@
-package prcd.ctlm.projet;
+package prcd.ctlm.controller;
 
+import prcd.ctlm.client.MultieClient;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
+import prcd.ctlm.CTLMProject;
 
 /**
  * @author Thomas Caspar and Thérésien Esberard

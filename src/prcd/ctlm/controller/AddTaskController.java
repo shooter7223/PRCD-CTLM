@@ -1,5 +1,6 @@
-package prcd.ctlm.projet;
+package prcd.ctlm.controller;
 
+import prcd.ctlm.client.MultieClient;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import prcd.ctlm.CTLMProject;
+
 
 /**
  * @author Thomas Caspar and Thérésien Esberard
@@ -42,6 +45,10 @@ public class AddTaskController {
     @FXML
     private void attributeTo() throws IOException{
         ctlm.showUsersList();
+    }
+    @FXML
+    public void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
     }
     
     public void initialize() throws InterruptedException {

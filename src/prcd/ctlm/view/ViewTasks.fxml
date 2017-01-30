@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.ViewTasksController">
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button onAction="#goHome" text="Accueil" />
+        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <Label styleClass="title" text="Mes tâches à faire" />
+   <ListView fx:id="listTask" prefHeight="249.0" prefWidth="356.0" />
+</VBox>

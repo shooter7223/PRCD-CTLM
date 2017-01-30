@@ -1,6 +1,6 @@
-package prcd.ctlm.projet;
+package prcd.ctlm.controller;
 
-import prcd.ctlm.projet.MultieClient;
+import prcd.ctlm.client.MultieClient;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import prcd.ctlm.CTLMProject;
 
 /**
  * @author Thomas Caspar and Thérésien Esberard
@@ -46,6 +47,11 @@ public class AttributeTaskController {
     @FXML
     private void finish(ActionEvent e) throws IOException{
         ctlm.viewTasks(e);
+    }
+    
+     @FXML
+    public void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
     }
     
    

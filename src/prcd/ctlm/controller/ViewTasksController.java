@@ -1,5 +1,6 @@
-package prcd.ctlm.projet;
+package prcd.ctlm.controller;
 
+import prcd.ctlm.client.MultieClient;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -7,12 +8,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import prcd.ctlm.CTLMProject;
 
 /*
  * @author Thomas Caspar and Thérésien Esberard
@@ -31,26 +28,25 @@ public class ViewTasksController {
     }
     
     @FXML
-    private void dummy(ActionEvent e) throws IOException{
-        ctlm.dummy(e);
+    private void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
     }
     
     @FXML
-    private void task(ActionEvent e) throws IOException{
-        Stage stage; 
-        VBox task;
-     
-        // get reference to the button's stage to stay at the same page
-        stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        
-        //load up OTHER FXML document
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(CTLMProject.class.getResource("Task.fxml"));
-        task = loader.load();
-        Scene scene = new Scene(task);
-        stage.setScene(scene);
-        stage.show();
-        
+    private void finish(ActionEvent e) throws IOException{
+        ctlm.goHome(e);
+    }
+    
+    @FXML
+    private void delete(ActionEvent e) throws IOException{
+        ctlm.goHome(e);
+    }
+    
+    
+    
+    @FXML
+    private void attributeTo(ActionEvent e) throws IOException{
+        ctlm.goHome(e);
     }
     
   

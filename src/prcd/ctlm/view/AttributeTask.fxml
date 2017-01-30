@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-
-<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.AttributeTaskController">
-    <Button onAction="#goHome" text="Accueil" />
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.AttributeTaskController">
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button onAction="#goHome" text="Accueil" />
+        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
+        
+    </GridPane>
+    
     <TextFlow styleClass="title">
         <Text fill="WHITE" text="Attribuer une de mes tâches à quelqu'un d'autre" />
       <VBox.margin>

@@ -1,5 +1,5 @@
 .CTLM {
-    -fx-background-color: #008080;
+    -fx-background-color: #808080;
     -fx-padding: 10px;
     -fx-font-family: Raleway, "Segoe UI";
     -fx-font-size: 10pt;
@@ -32,8 +32,25 @@
 
 .home {
     -fx-padding-top: 10px;
+    -fx-alignment: center;
 }
 
-.attributeTask .label {
+.home .button {
+    -fx-font-size: 20px;
+    -fx-background-color: #404040;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.home .button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #404040;
+}
+
+.table {
+    -fx-alignment: center;
+}
+
+.table .label {
     -fx-padding: 5px 10px 5px 0;
 }

@@ -1,10 +1,11 @@
-package prcd.ctlm.projet;
+package prcd.ctlm.controller;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import prcd.ctlm.CTLMProject;
 
 /*
  * @author Thomas Caspar and Thérésien Esberard
@@ -37,6 +38,10 @@ public class HomeController {
     
     public void deleteTask(ActionEvent e) throws IOException{
         ctlm.deleteTask(e);
+    }
+    
+    public void logOut(ActionEvent e) throws IOException{
+        ctlm.logOut(e);
     }
     
     public void initialize(URL url, ResourceBundle rb) {
