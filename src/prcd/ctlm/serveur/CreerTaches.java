@@ -41,7 +41,7 @@ public class CreerTaches {
        
         
         
-        xml.write("<Tache idT=\"" + idT + "\" idU=\"" + idU + "\" titre=\"" + titre +"\" dateC=\""+ dateC+"\" dateF=\""+ dateF + "\"  priorite=\"" + prio + "\" >" );
+        xml.write("<Tache etat=\"" + idT + "\" idU=\"" + idU + "\" titre=\"" + titre +"\" dateC=\""+ dateC+"\" dateF=\""+ dateF + "\"  priorite=\"" + prio + "\" >" );
          xml.write(description); 
         xml.write("</Tache>"); 
         

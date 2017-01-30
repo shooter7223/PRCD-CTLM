@@ -1,3 +1,3 @@
 <root>
 
-<utilisateur><id>aze</id><nom>aze</nom><prenom>aze</prenom><e-mail>aze</e-mail><motDePasse>aze</motDePasse></utilisateur><utilisateur><id>az</id><nom>az</nom><prenom>az</prenom><e-mail>az</e-mail><motDePasse>az</motDePasse></utilisateur><utilisateur><id>b</id><nom>b</nom><prenom>b</prenom><e-mail>b</e-mail><motDePasse>b</motDePasse></utilisateur><utilisateur><id>a</id><nom>a</nom><prenom>a</prenom><e-mail>a</e-mail><motDePasse>a</motDePasse></utilisateur><utilisateur><id>t</id><nom>t</nom><prenom>t</prenom><e-mail>t</e-mail><motDePasse>t</motDePasse></utilisateur></root>
+<utilisateur><id>thomas.caspar</id><nom>CASPAR</nom><prenom>Thomas</prenom><e-mail>thomas.caspar@enim.fr</e-mail><motDePasse>toto</motDePasse></utilisateur></root>
