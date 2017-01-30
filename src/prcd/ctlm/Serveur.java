@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prcd.ctlm.serveur;
+package prcd.ctlm;
 
 import java.io.*;
 import java.net.*;
+import prcd.ctlm.serveur.ServeurThread;
 
 public class Serveur {
  public static ServerSocket ss = null;
