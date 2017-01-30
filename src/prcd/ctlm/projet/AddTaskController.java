@@ -3,8 +3,10 @@ package prcd.ctlm.projet;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -18,6 +20,9 @@ public class AddTaskController {
     
     @FXML
     private TextArea descriptionBox;
+    
+    @FXML
+    private ComboBox userlist;
     
     @FXML
     private TextField titreBox, dC, dF;
@@ -39,8 +44,11 @@ public class AddTaskController {
         ctlm.showUsersList();
     }
     
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize() throws InterruptedException {
         // TODO
+        client.clientListUser();
+        Thread.sleep(500);
+        userlist.setItems( FXCollections.observableArrayList(client.listUserview.listUser) );
     }    
     
 }
