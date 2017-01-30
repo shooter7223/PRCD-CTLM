@@ -72,6 +72,13 @@ public class ServeurCommande implements Runnable {
                                     t.start();
                                     t.join();
                             }
+                            if(cmd.equals("lisU"))
+                            {
+                                    System.out.println("comande lisT lancée");
+                                    t = new Thread(new GestionUser(socket));
+                                    t.start();
+                                    t.join();
+                            }
                         }
                         
                         	

@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" styleClass="CTLM" stylesheets="@Theme.css" fx:controller="prcd.ctlm.projet.UsersListController">
-    <TableView fx:id="usersTable">
-        <TableColumn fx:id="firstNameColumn" text="First Name" />
-    </TableView>
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.UsersListController">
+   <ListView fx:id="listUser" prefHeight="282.0" prefWidth="228.0" />
     <HBox>
-        <Button text="Annuler" onAction="#close" />
+        <Button onAction="#close" text="Annuler" />
         <Button text="Valider" />
     </HBox>
 </VBox>

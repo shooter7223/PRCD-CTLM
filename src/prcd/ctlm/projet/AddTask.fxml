@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
@@ -11,7 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
 
 <VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.projet.AddTaskController">
     <Button onAction="#goHome" text="Accueil" />
@@ -50,14 +50,6 @@
             <GridPane.margin><Insets bottom="5.0" left="10.0" top="5.0" /></GridPane.margin>
         </HBox>
         <Label maxWidth="1.7976931348623157E308" text="Debut/Fin" GridPane.rowIndex="4" />
-        <Button onAction="#attributeTo" text="Attribuer à" GridPane.rowIndex="5">
-         <GridPane.margin>
-            <Insets top="5.0" />
-         </GridPane.margin></Button>
-        <Text fill="WHITE" text="Machin" GridPane.columnIndex="1" GridPane.rowIndex="5">
-         <GridPane.margin>
-            <Insets left="10.0" top="5.0" />
-         </GridPane.margin></Text>
       <HBox prefHeight="33.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <children>
             <TextField fx:id="dC" prefHeight="30.0" prefWidth="146.0" />
@@ -78,6 +70,12 @@
          <RowConstraints />
       </rowConstraints>
     </GridPane>
+   <HBox prefHeight="41.0" prefWidth="327.0">
+      <children>
+         <Label maxWidth="1.7976931348623157E308" text="Attribuer" />
+         <ComboBox fx:id="userlist" prefHeight="21.0" prefWidth="274.0" />
+      </children>
+   </HBox>
     <HBox alignment="CENTER">
         <Button onAction="#goHome" text="Annuler" />
         <Button onAction="#create" text="Valider">

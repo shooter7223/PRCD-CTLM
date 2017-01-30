@@ -17,6 +17,7 @@ import org.xml.sax.helpers.DefaultHandler;
 public class ReadXML {
     boolean idTest = false;
     boolean accept = false;
+    public List<String> listUser = new ArrayList<String>();
    
    public boolean read(String Id_ , String pass_) {
     System.out.println("id : " + Id_ + "pass : " + pass_);
@@ -81,6 +82,7 @@ public class ReadXML {
 		if (id) {
                         String Id = new String (ch, start, length);
 			System.out.println("id : " + Id);
+                        listUser.add("Id : " + Id);
                         
                         if(Id.equals(Id_)){
                             System.out.println("ID TROUVER " + Id);
@@ -91,16 +93,22 @@ public class ReadXML {
 		}
 
 		if (nom) {
-			System.out.println("nom : " + new String(ch, start, length));
+                        String Nom =  new String(ch, start, length);
+                        listUser.add("Nom : " + Nom);
+			System.out.println("Nom : " + Nom );
 			nom = false;
 		}
 
 		if (prenom) {
-			System.out.println("prenom : " + new String(ch, start, length));
+                        String Prenom =  new String(ch, start, length);
+                        listUser.add("Prenom : " + Prenom);
+			System.out.println("prenom : " + Prenom);
 			prenom = false;
 		}
                 if (mail) {
-			System.out.println("mail : " + new String(ch, start, length));
+                        String Mail =  new String(ch, start, length);
+                        listUser.add("E-mail : " + Mail);
+			System.out.println("E-mail : " + Mail);
 			mail = false;
 		}
                 if (motDePasse) {

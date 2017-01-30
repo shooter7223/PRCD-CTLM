@@ -3,8 +3,10 @@ package prcd.ctlm.projet;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 /**
@@ -14,6 +16,10 @@ import javafx.stage.Stage;
 public class UsersListController {
     CTLMProject ctlm = new CTLMProject();
     private Stage stage;
+    private MultieClient client = new MultieClient();
+    
+    @FXML
+    private ListView  listUser = new ListView();
     
     public void setDialogStage(Stage stage) {
         this.stage = stage;
@@ -30,8 +36,14 @@ public class UsersListController {
     }
     
     
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize() throws InterruptedException {
         // TODO
+        client.clientListUser();
+        Thread.sleep(500);
+        listUser.setItems( FXCollections.observableArrayList(client.listUserview.listUser) );
+        
+        
+        
     }    
     
 }

@@ -54,6 +54,16 @@ public class ReadXMLTaches {
                             listTache.add("Priotite : " + priorite);
                             Tache = true;
                         }
+                        if(idU_.equals("0"))
+                        {
+                            listTache.add("Id de la Tache : " + idT);
+                            listTache.add("Id de l'utilisateur : " + idU);
+                            listTache.add("Titre : " + titre);
+                            listTache.add("Date de Commensement : " + dateC);
+                            listTache.add("Date de Fin : " + dateF);
+                            listTache.add("Priotite : " + priorite);
+                            Tache = true;
+                        }
                        
 		}
 	}
