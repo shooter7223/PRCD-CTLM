@@ -3,9 +3,12 @@ package prcd.ctlm.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 import prcd.ctlm.CTLMProject;
+import prcd.ctlm.client.MultieClient;
 
 /**
  * @author Thomas Caspar and Thérésien Esberard
@@ -13,6 +16,10 @@ import prcd.ctlm.CTLMProject;
 
 public class FinishTaskController {
     CTLMProject ctlm = new CTLMProject();
+    private MultieClient client = new MultieClient();
+    
+    @FXML
+    private ListView listTache;
     
     @FXML
     private void goHome(ActionEvent e) throws IOException{
@@ -29,8 +36,10 @@ public class FinishTaskController {
         ctlm.logOut(e);
     }
     
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize() throws InterruptedException {
+        client.clientList("0");
+        Thread.sleep(500);
+        listTache.setItems( FXCollections.observableArrayList(client.listTacheUser.listTache) );
     }    
     
 }

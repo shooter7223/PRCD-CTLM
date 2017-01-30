@@ -79,6 +79,27 @@ public class ServeurCommande implements Runnable {
                                     t.start();
                                     t.join();
                             }
+                             if(cmd.equals("editT"))
+                            {
+                                    System.out.println("comande editT lancée");
+                                    t = new Thread(new GestionTache(socket,"editT"));
+                                    t.start();
+                                    t.join();
+                            }
+                              if(cmd.equals("editTE"))
+                            {
+                                    System.out.println("comande editTE lancée");
+                                    t = new Thread(new GestionTache(socket,"editTE"));
+                                    t.start();
+                                    t.join();
+                            }
+                               if(cmd.equals("supT"))
+                            {
+                                    System.out.println("comande supT lancée");
+                                    t = new Thread(new GestionTache(socket,"supT"));
+                                    t.start();
+                                    t.join();
+                            }
                         }
                         
                         	

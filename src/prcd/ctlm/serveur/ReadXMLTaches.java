@@ -46,22 +46,22 @@ public class ReadXMLTaches {
                         
                         if(idU.equals(idU_))
                         {
-                            listTache.add("Titre : " + titre);
-                            listTache.add("Etat de la Tache : " + idT);
-                            listTache.add("Id de l'utilisateur : " + idU);
-                            listTache.add("Date de Commensement : " + dateC);
-                            listTache.add("Date de Fin : " + dateF);
-                            listTache.add("Priotite : " + priorite);
+                            listTache.add("Titre :" + titre);
+                            listTache.add("Etat de la Tache :" + idT);
+                            listTache.add("Id de l'utilisateur :" + idU);
+                            listTache.add("Date de Commensement :" + dateC);
+                            listTache.add("Date de Fin :" + dateF);
+                            listTache.add("Priotite :" + priorite);
                             Tache = true;
                         }
                         if(idU_.equals("0"))
                         {
-                            listTache.add("Titre : " + titre);
-                            listTache.add("Etat de la Tache : " + idT);
-                            listTache.add("Id de l'utilisateur : " + idU);
-                            listTache.add("Date de Commensement : " + dateC);
-                            listTache.add("Date de Fin : " + dateF);
-                            listTache.add("Priotite : " + priorite);
+                            listTache.add("Titre :" + titre);
+                            listTache.add("Etat de la Tache :" + idT);
+                            listTache.add("Id de l'utilisateur :" + idU);
+                            listTache.add("Date de Commensement :" + dateC);
+                            listTache.add("Date de Fin :" + dateF);
+                            listTache.add("Priotite :" + priorite);
                             Tache = true;
                         }
                        
@@ -78,7 +78,7 @@ public class ReadXMLTaches {
 	public void characters(char ch[], int start, int length) throws SAXException {
                
 		if (Tache) {
-                        listTache.add("Description : " + new String (ch, start, length));
+                        listTache.add("Description :" + new String (ch, start, length));
 			System.out.println(" " + new String (ch, start, length));
 			Tache = false;
 		}

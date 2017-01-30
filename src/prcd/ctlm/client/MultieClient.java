@@ -117,6 +117,100 @@ public class MultieClient {
 	
 
 	}
+         public void clientEditT(String idUe, String idT, String idU, String titre, String description, String dc, String df, String prio) throws InterruptedException {
+	
+		
+	try {
+		
+		System.out.println("Demande de connexion");
+		socket = new Socket("127.0.0.1",2009);
+		System.out.println("Connexion établie avec le serveur, authentification :"); // Si le message s'affiche c'est que je suis connecté
+                
+                out = new PrintWriter(socket.getOutputStream());
+		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));	
+		sc = new Scanner(System.in);
+                
+                System.out.println(in.readLine());
+		out.println("editT");
+                out.flush();
+		
+		t1 = new Thread(addTache = new AddTaskClient(socket, idUe, idT, idU, titre, description, dc, df, prio));
+		t1.start();
+		
+		
+		
+	} catch (UnknownHostException e) {
+	  System.err.println("Impossible de se connecter à l'adresse "+socket.getLocalAddress());
+	} catch (IOException e) {
+	  System.err.println("Aucun serveur à l'écoute du port "+socket.getLocalPort());
+	}
+	
+	
+
+	}
+        public void clientEditEtat(String idTe, String idT, String idU, String titre, String description, String dc, String df, String prio) throws InterruptedException {
+	
+		
+	try {
+		
+		System.out.println("Demande de connexion");
+		socket = new Socket("127.0.0.1",2009);
+		System.out.println("Connexion établie avec le serveur, authentification :"); // Si le message s'affiche c'est que je suis connecté
+                
+                out = new PrintWriter(socket.getOutputStream());
+		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));	
+		sc = new Scanner(System.in);
+                
+                System.out.println(in.readLine());
+		out.println("editTE");
+                out.flush();
+		
+		t1 = new Thread(addTache = new AddTaskClient(socket, idTe, idT, idU, titre, description, dc, df, prio, "n"));
+		t1.start();
+		
+		
+		
+	} catch (UnknownHostException e) {
+	  System.err.println("Impossible de se connecter à l'adresse "+socket.getLocalAddress());
+	} catch (IOException e) {
+	  System.err.println("Aucun serveur à l'écoute du port "+socket.getLocalPort());
+	}
+	
+	
+
+	}
+        
+         public void clientEditSup(String idT, String idU, String titre, String description, String dc, String df, String prio) throws InterruptedException {
+	
+		
+	try {
+		
+		System.out.println("Demande de connexion");
+		socket = new Socket("127.0.0.1",2009);
+		System.out.println("Connexion établie avec le serveur, authentification :"); // Si le message s'affiche c'est que je suis connecté
+                
+                out = new PrintWriter(socket.getOutputStream());
+		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));	
+		sc = new Scanner(System.in);
+                
+                System.out.println(in.readLine());
+		out.println("supT");
+                out.flush();
+		
+		t1 = new Thread(addTache = new AddTaskClient(socket, null, idT, idU, titre, description, dc, df, prio, "s"));
+		t1.start();
+		
+		
+		
+	} catch (UnknownHostException e) {
+	  System.err.println("Impossible de se connecter à l'adresse "+socket.getLocalAddress());
+	} catch (IOException e) {
+	  System.err.println("Aucun serveur à l'écoute du port "+socket.getLocalPort());
+	}
+	
+	
+
+	}
         
         public void clientList(String idU) throws InterruptedException {
 	

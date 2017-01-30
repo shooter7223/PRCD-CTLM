@@ -37,7 +37,7 @@ public class CreerUtilisateur {
         {
             xml.write("<root>\n");
         
-        }else xml.write(xml_save.get(0)+"\n\n");
+        }else xml.write(xml_save.get(0)+"\n");
        
         
         
@@ -63,13 +63,13 @@ public class CreerUtilisateur {
         xml.write(pass);
         xml.write("</motDePasse>");
         
-        xml.write("</utilisateur>");
+        xml.write("</utilisateur>\n");
         
         if(doc_vide == false)
         {
             for(int j = 1;j < xml_save.size();j++)
             {
-                xml.write(xml_save.get(j));
+                xml.write(xml_save.get(j)+"\n");
             }
         
         }

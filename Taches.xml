@@ -1,3 +1,6 @@
 <root>
-
-<Tache etat="Elevee" idU="thomas.caspar" titre="test" dateC="30/01/2017" dateF="30/01/2017"  priorite="Finit" >test</Tache><Tache etat="a faire" idU="thomas.caspar" titre="Faire dipo soutenance" dateC="30/01/2017" dateF="02/02/2017"  priorite="Elevee" >dipo soutenance intermedière projet</Tache></root>
+<Tache etat="faible" idU="toto" titre="test tache 2" dateC="30/01/2017" dateF="30/01/2017"  priorite="A faire" > test tache 2</Tache>
+<Tache etat="Elevee" idU="toto" titre="Nouvell Tachetest" dateC="20/02/2017" dateF="20/02/2017"  priorite="Finit" > Nouvell Tachetest</Tache>
+<Tache etat="Moyenne" idU="thomas.caspar" titre="Test de tache" dateC="30/01/2017" dateF="30/01/2017"  priorite=" En cours" > Test de tache</Tache>
+<Tache etat="Elevee" idU="thomas.caspar" titre="test" dateC=" 30/01/2017" dateF="30/01/2017"  priorite="Finit" > test</Tache>
+</root>
