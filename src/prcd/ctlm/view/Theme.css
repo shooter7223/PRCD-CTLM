@@ -1,50 +1,83 @@
 .CTLM {
-    -fx-background-color: #808080;
+    -fx-background-color: #e0cda9;
     -fx-padding: 10px;
     -fx-font-family: Raleway, "Segoe UI";
     -fx-font-size: 10pt;
-    -fx-text-fill: white;
+    -fx-text-fill: #582900;
+    -fx-spacing: 20px;
     }
     
 .title {
-    -fx-background-color: #80C0C0;
+    -fx-background-color: #ed7f10;
     -fx-padding: 10px;
     -fx-font-family: "Raleway ExtraBold", "Segoe UI Semibold";
     -fx-font-size: 20pt;
+    -fx-wrap-text: true;
+    }
+
+.title .text {
+    -fx-fill: white;
+}
+
+.subtitle {
+    -fx-background-color: #f6bf88;
+    -fx-padding: 5px;
+    -fx-font-family: "Raleway ExtraBold", "Segoe UI Semibold";
+    -fx-font-size: 15pt;
     -fx-text-fill: white;
     }
     
 .label{
-    -fx-text-fill: white;
+    -fx-text-fill: #582900;
 }
 
 .button{
     -fx-border-color: white;
-    -fx-background-color: teal;
+    -fx-background-color: #582900;
     -fx-background-radius: 0;
     -fx-text-fill: white;
 }
 
 .button:hover {
     -fx-background-color: white;
-    -fx-text-fill: teal;
+    -fx-text-fill: #582900;
 }
 
-.home {
-    -fx-padding-top: 10px;
+.radio-button .text {
+    -fx-fill: #582900;
+}
+
+.home, .addTask {
     -fx-alignment: center;
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
 }
 
 .home .button {
     -fx-font-size: 20px;
-    -fx-background-color: #404040;
     -fx-text-alignment: center;
     -fx-wrap-text: true;
+    -fx-max-width: 1000px;
+    -fx-max-height: 1000px;
+    -fx-background-color: #f6bf88;
+    -fx-text-fill: #582900;
+    -fx-border-color: #582900;
+    -fx-font-family: "Raleway SemiBold", "Segoe UI Semibold";
 }
 
 .home .button:hover {
-    -fx-background-color: white;
-    -fx-text-fill: #404040;
+    -fx-background-color: #582900;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+.identificationHBox, .bottomButtons {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+.identificationVBox, .addTaskHBox {
+    -fx-spacing: 10px;
 }
 
 .table {
@@ -53,4 +86,8 @@
 
 .table .label {
     -fx-padding: 5px 10px 5px 0;
+}
+
+.logOut {
+    -fx-alignment: top-right;
 }

@@ -72,7 +72,7 @@ public class AttributeTaskController {
     
      @FXML
     public void logOut(ActionEvent e) throws IOException{
-        ctlm.logOut(e);
+        ctlm.close(e);
     }
     
    

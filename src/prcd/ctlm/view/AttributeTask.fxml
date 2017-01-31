@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
@@ -12,28 +13,19 @@
             <ColumnConstraints />
             <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
         </columnConstraints>
-        <Button onAction="#goHome" text="Accueil" />
-        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
-        
+        <Button onAction="#goHome" text="Accueil" GridPane.columnIndex="0">
+            <graphic><ImageView fitHeight="20" fitWidth="22"><Image url="@HomeIcon.png" /></ImageView></graphic>
+        </Button>
+        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1">
+            <graphic><ImageView fitHeight="20" fitWidth="20"><Image url="@UserIcon.png" /></ImageView></graphic>
+        </Button>
     </GridPane>
-    
-    <TextFlow styleClass="title">
-        <Text fill="WHITE" text="Attribuer une de mes tâches à quelqu'un d'autre" />
-      <VBox.margin>
-         <Insets top="10.0" />
-      </VBox.margin>
-    </TextFlow>
-   <ListView fx:id="listTache" prefHeight="200.0" prefWidth="527.0" />
-    <HBox alignment="CENTER">
-      <Text fill="WHITE" text="Attribuer" />
-      <ComboBox fx:id="userlist" prefHeight="30.0" prefWidth="135.0" />
+    <Label styleClass="title" text="Attribuer une de mes tâches à…" />
+    <ListView fx:id="listTache" />
+    <HBox styleClass="bottomButtons">
+        <Text text="Attribuer à" />
+        <ComboBox fx:id="userlist" />
         <Button onAction="#goHome" text="Annuler" />
-        <Button onAction="#validate" text="Valider">
-         <HBox.margin>
-            <Insets left="10.0" />
-         </HBox.margin></Button>
-      <VBox.margin>
-         <Insets top="10.0" />
-      </VBox.margin>
+        <Button onAction="#validate" text="Valider" />
     </HBox>
 </VBox>

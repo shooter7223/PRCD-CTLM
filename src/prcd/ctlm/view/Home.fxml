@@ -1,54 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<GridPane styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.HomeController">
-    <GridPane>
-        <columnConstraints>
-            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
-        </columnConstraints>
-        <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
-    </GridPane>
-    <Label styleClass="title" text="Que vais-je faire aujourd'hui ?" GridPane.rowIndex="1">
-      <GridPane.margin>
-         <Insets bottom="10.0" top="10.0" />
-      </GridPane.margin></Label>
-    <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="home" GridPane.rowIndex="2">
-        <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewTasks" prefWidth="153.0" text="Consulter mes tâches" GridPane.rowIndex="0">
-            <GridPane.margin>
-               <Insets bottom="5.0" right="5.0" />
-            </GridPane.margin>
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.HomeController">
+    <HBox styleClass="logOut">
+        <Button onAction="#logOut" text="Déconnexion">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <Image url="@UserIcon.png" />
+                </ImageView>
+            </graphic>
         </Button>
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addTask" text="Ajouter une tâche" GridPane.columnIndex="1" GridPane.rowIndex="0">
-            <GridPane.margin>
-               <Insets bottom="5.0" left="5.0" right="5.0" />
-            </GridPane.margin>
-         </Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#finishTask" prefWidth="153.0" text="Terminer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="0">
-            <GridPane.margin>
-               <Insets bottom="5.0" left="5.0" />
-            </GridPane.margin>
-         </Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#takeTask" text="Prendre une tâche" GridPane.rowIndex="1">
-            <GridPane.margin>
-               <Insets right="5.0" top="5.0" />
-            </GridPane.margin>
-         </Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#attributeTask" prefHeight="153.0" prefWidth="153.0" text="Déléguer une tâche" GridPane.columnIndex="1" GridPane.rowIndex="1">
-            <GridPane.margin>
-               <Insets left="5.0" right="5.0" top="5.0" />
-            </GridPane.margin>
-         </Button>
-         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteTask" prefWidth="153.0" text="Supprimer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="1">
-            <GridPane.margin>
-               <Insets left="5.0" top="5.0" />
-            </GridPane.margin>
-         </Button>
+    </HBox>
+    <Label styleClass="title" text="Que vais-je faire aujourd'hui ?" />
+    <GridPane styleClass="home">
+        <Button mnemonicParsing="false" onAction="#viewTasks" text="Consulter mes tâches" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" onAction="#addTask" text="Ajouter une tâche" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" onAction="#finishTask" text="Terminer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" onAction="#takeTask" text="Prendre une tâche" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" onAction="#attributeTask" text="Déléguer une tâche" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" onAction="#deleteTask" text="Supprimer une tâche" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" prefWidth="153.333" />
             <ColumnConstraints halignment="CENTER" prefWidth="153.333" />
@@ -56,16 +35,7 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints prefHeight="153.333" />
-            <RowConstraints />
-            <RowConstraints />
+            <RowConstraints prefHeight="153.333" />
          </rowConstraints>
       </GridPane>
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-</GridPane>
+</VBox>

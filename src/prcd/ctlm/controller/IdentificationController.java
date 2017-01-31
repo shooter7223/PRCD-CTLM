@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import prcd.ctlm.CTLMProject;
 
@@ -21,7 +22,10 @@ public class IdentificationController {
     private MultieClient client = new MultieClient() ;
     
     @FXML
-    private TextField identifiantBox, mdpBox, iid, inom, iprenom, imail, imdp;
+    private TextField identifiantBox, iid, inom, iprenom, imail;
+    
+    @FXML
+    private PasswordField mdpBox, imdp;
     
     @FXML
     private Label ConnexionOK = new Label();
@@ -43,7 +47,7 @@ public class IdentificationController {
     @FXML
     private void inscription(ActionEvent e) throws IOException, InterruptedException{
         
-        client.clientIns(iid.getText(), inom.getText(), iprenom.getText(), imail.getText(), imdp.getText(),  "y");
+        client.clientIns((SaveUser.user = iid.getText()), inom.getText(), iprenom.getText(), imail.getText(), imdp.getText(),  "y");
         Thread.sleep(500);
         //System.out.println(client.connect.connect);
         if(client.connect.connectServer)ctlm.goHome(e);

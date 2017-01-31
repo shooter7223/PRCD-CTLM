@@ -41,7 +41,7 @@ public class HomeController {
     }
     
     public void logOut(ActionEvent e) throws IOException{
-        ctlm.logOut(e);
+        ctlm.close(e);
     }
     
     public void initialize(URL url, ResourceBundle rb) {
