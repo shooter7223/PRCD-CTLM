@@ -76,7 +76,7 @@ public class AddTaskController {
         }
         if(p3.isSelected() == true)
         {
-            Prio = "Finit";
+            Prio = "Fini";
         }
         
         client.clientAddT( Etat,user, titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),Prio );

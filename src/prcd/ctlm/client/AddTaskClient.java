@@ -27,7 +27,7 @@ public class AddTaskClient implements Runnable {
 	private BufferedReader in = null;
         private boolean connect = false;
         
-        public AddTaskClient(Socket s, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_){
+        public AddTaskClient(Socket s, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_, String user_){
 		
 		socket = s;
                 idT = idT_;
@@ -37,9 +37,10 @@ public class AddTaskClient implements Runnable {
                 df = df_;
                 p = p_;
                 d = d_;
+                user = user_;
                 
 	}
-        public AddTaskClient(Socket s,String idUe_, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_){
+        public AddTaskClient(Socket s,String idUe_, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_, String user_){
 		
 		socket = s;
                 idUe = idUe_;
@@ -50,23 +51,9 @@ public class AddTaskClient implements Runnable {
                 df = df_;
                 p = p_;
                 d = d_;
+                user = user_;
                 
 	}
-        public AddTaskClient(Socket s,String idTe_, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_, String n){
-		
-		socket = s;
-                idTe = idTe_;
-                idT = idT_;
-                idU = idU_;
-                titre = titre_;
-                dc = dc_;
-                df = df_;
-                p = p_;
-                d = d_;
-                user = n;
-                
-	}
-        
         
         public void run() {
 		
@@ -75,7 +62,7 @@ public class AddTaskClient implements Runnable {
 		out = new PrintWriter(socket.getOutputStream());
 		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 
-		if(user.equals("s"))
+		if(user.equals("supT"))
                 {
 		while(!connect ){
 		
@@ -119,7 +106,7 @@ public class AddTaskClient implements Runnable {
                 }
                 }
                 
-                if(idUe.equals(null) && idTe.equals(null) )
+                if(user.equals("addT"))
                 {
 		while(!connect ){
 		
@@ -162,7 +149,7 @@ public class AddTaskClient implements Runnable {
                 
                 }
                 }
-                else if((!idUe.equals(null)) && (idTe.equals(null)) )
+                else if(user.equals("editU") )
                 {
                     while(!connect ){
                         
@@ -209,13 +196,13 @@ public class AddTaskClient implements Runnable {
                 connect = true;
                 }
                 }
-                else if((idUe.equals(null)) && (!idTe.equals(null)) )
+                else if(user.equals("editE") )
                 {
                     while(!connect ){
                         
                 System.out.println(in.readLine());
 		//user = sc.nextLine();
-		out.println(idTe);
+		out.println(idUe);
 		out.flush();
 		
 		System.out.println(in.readLine());

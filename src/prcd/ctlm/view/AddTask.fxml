@@ -57,14 +57,14 @@
     </HBox>
         <Label text="État" GridPane.rowIndex="3" />
         <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
-            <RadioButton fx:id="e1"  mnemonicParsing="false" text="A faire" textFill="WHITE">
+            <RadioButton fx:id="e1" mnemonicParsing="false" text="A faire" textFill="WHITE">
             <toggleGroup>
                <ToggleGroup fx:id="etat" />
             </toggleGroup></RadioButton>
             <RadioButton fx:id="e2" mnemonicParsing="false" text="En cours" textFill="WHITE" toggleGroup="$etat">
                 <HBox.margin><Insets left="10.0" /></HBox.margin>
             </RadioButton>
-         <RadioButton fx:id="e3" mnemonicParsing="false" text="Finit" textFill="WHITE" toggleGroup="$etat" />
+         <RadioButton fx:id="e3" mnemonicParsing="false" text="Fini" textFill="WHITE" toggleGroup="$etat" />
             <GridPane.margin><Insets bottom="5.0" left="10.0" top="5.0" /></GridPane.margin>
         </HBox>
         <Label maxWidth="1.7976931348623157E308" text="Debut/Fin" GridPane.rowIndex="4" />

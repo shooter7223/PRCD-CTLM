@@ -71,8 +71,8 @@ public class GestionTache implements Runnable {
                         d = in.readLine();
                     
                         CreerTaches creerTache = new CreerTaches();
-                         creerTache.NouvelleTache(idT, idU, titre, d, dc, df, p);
-                         gestionTache = true;
+                        creerTache.NouvelleTache(idT, idU, titre, d, dc, df, p);
+                        gestionTache = true;
                     }
                     }
                     if(user.equals("lisT")) 
@@ -137,7 +137,7 @@ public class GestionTache implements Runnable {
                     {
                         while(!gestionTache){
                             
-                        out.println("idUe :");
+                        out.println("idTe :");
                         out.flush();
                         idTe = in.readLine();
                     
@@ -208,7 +208,7 @@ public class GestionTache implements Runnable {
                         d = in.readLine();
                     
                         CreerTaches creerTache = new CreerTaches();
-                        creerTache.EditTacheEtat(idTe, idT, idU, titre, d, dc, df, p);
+                        creerTache.EditTacheSup(idT, idU, titre, d, dc, df, p);
                         gestionTache = true;
                     }
                     }

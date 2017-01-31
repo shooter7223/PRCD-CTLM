@@ -1,4 +1,5 @@
 <root>
+<utilisateur><id>lol</id><nom>lili</nom><prenom>lili</prenom><e-mail>loli</e-mail><motDePasse>lil</motDePasse></utilisateur>
 <utilisateur><id>toto</id><nom>toto</nom><prenom>toto</prenom><e-mail>toto@ensim.fr</e-mail><motDePasse>toto</motDePasse></utilisateur>
 <utilisateur><id>thomas.caspar</id><nom>CASPAR</nom><prenom>Thomas</prenom><e-mail>thomas.caspar@enim.fr</e-mail><motDePasse>toto</motDePasse></utilisateur>
 </root>

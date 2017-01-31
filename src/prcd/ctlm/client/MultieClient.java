@@ -103,7 +103,7 @@ public class MultieClient {
 		out.println("addT");
                 out.flush();
 		
-		t1 = new Thread(addTache = new AddTaskClient(socket, idT, idU, titre, description, dc, df, prio));
+		t1 = new Thread(addTache = new AddTaskClient(socket, idT, idU, titre, description, dc, df, prio, "addT"));
 		t1.start();
 		
 		
@@ -134,7 +134,7 @@ public class MultieClient {
 		out.println("editT");
                 out.flush();
 		
-		t1 = new Thread(addTache = new AddTaskClient(socket, idUe, idT, idU, titre, description, dc, df, prio));
+		t1 = new Thread(addTache = new AddTaskClient(socket, idUe, idT, idU, titre, description, dc, df, prio, "editU"));
 		t1.start();
 		
 		
@@ -165,7 +165,7 @@ public class MultieClient {
 		out.println("editTE");
                 out.flush();
 		
-		t1 = new Thread(addTache = new AddTaskClient(socket, idTe, idT, idU, titre, description, dc, df, prio, "n"));
+		t1 = new Thread(addTache = new AddTaskClient(socket, idTe, idT, idU, titre, description, dc, df, prio, "editE"));
 		t1.start();
 		
 		
@@ -197,7 +197,7 @@ public class MultieClient {
 		out.println("supT");
                 out.flush();
 		
-		t1 = new Thread(addTache = new AddTaskClient(socket, null, idT, idU, titre, description, dc, df, prio, "s"));
+		t1 = new Thread(addTache = new AddTaskClient(socket,idT, idU, titre, description, dc, df, prio, "supT"));
 		t1.start();
 		
 		
@@ -275,5 +275,9 @@ public class MultieClient {
 	
 
 	}
+
+    public void clientEditT(Object object, String get, String get0, String get1, String get2, String get3, String get4, String get5, String s) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
