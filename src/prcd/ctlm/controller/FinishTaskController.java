@@ -52,7 +52,7 @@ public class FinishTaskController {
     
     @FXML
     private void logOut(ActionEvent e) throws IOException{
-        ctlm.logOut(e);
+        ctlm.close(e);
     }
     
     public void initialize() throws InterruptedException {

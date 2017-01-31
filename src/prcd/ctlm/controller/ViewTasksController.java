@@ -30,7 +30,7 @@ public class ViewTasksController {
     
     @FXML
     private void logOut(ActionEvent e) throws IOException{
-        ctlm.logOut(e);
+        ctlm.close(e);
     }
     
     @FXML

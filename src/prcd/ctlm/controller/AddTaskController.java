@@ -89,8 +89,8 @@ public class AddTaskController {
         ctlm.showUsersList();
     }
     @FXML
-    public void logOut(ActionEvent e) throws IOException{
-        ctlm.logOut(e);
+    public void logOut(ActionEvent e) throws IOException, Exception{
+        ctlm.close(e);
     }
     
     public void initialize() throws InterruptedException {
