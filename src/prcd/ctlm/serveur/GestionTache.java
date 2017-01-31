@@ -23,7 +23,7 @@ public class GestionTache implements Runnable {
     private Socket socket;
     private PrintWriter out = null;
     private BufferedReader in = null;
-    private String idT = null, idU =  null, titre = null , p = null, d = null, dc = null, df = null, user = null;
+    private String idT = null, idU =  null, titre = null , p = null, d = null, dc = null, df = null, user = null, idUe = null, idTe = null;
     public boolean gestionTache = false;
     
     public GestionTache(Socket s, String user_){
@@ -71,8 +71,8 @@ public class GestionTache implements Runnable {
                         d = in.readLine();
                     
                         CreerTaches creerTache = new CreerTaches();
-                         creerTache.NouvelleTache(idT, idU, titre, d, dc, df, p);
-                         gestionTache = true;
+                        creerTache.NouvelleTache(idT, idU, titre, d, dc, df, p);
+                        gestionTache = true;
                     }
                     }
                     if(user.equals("lisT")) 
@@ -90,6 +90,127 @@ public class GestionTache implements Runnable {
                         }
                         out.println("fin");
                         out.flush();
+                    }
+                    
+                    if(user.equals("editT")) 
+                    {
+                        while(!gestionTache){
+                            
+                        out.println("idUe :");
+                        out.flush();
+                        idUe = in.readLine();
+                    
+                        out.println("idT :");
+                        out.flush();
+                        idT = in.readLine();
+                    
+                        out.println("idU :");
+                        out.flush();
+                        idU = in.readLine();
+                    
+                        out.println("titre :");
+                        out.flush();
+                        titre = in.readLine();
+                    
+                        out.println("p :");
+                        out.flush();
+                        p = in.readLine();
+                    
+                        out.println("dateC :");
+                        out.flush();
+                        dc = in.readLine();
+                    
+                        out.println("dateF :");
+                        out.flush();
+                        df = in.readLine();
+                    
+                        out.println("d :");
+                        out.flush();
+                        d = in.readLine();
+                    
+                        CreerTaches creerTache = new CreerTaches();
+                        creerTache.EditTache(idUe, idT, idU, titre, d, dc, df, p);
+                        gestionTache = true;
+                    }
+                    }
+                     if(user.equals("editTE")) 
+                    {
+                        while(!gestionTache){
+                            
+                        out.println("idTe :");
+                        out.flush();
+                        idTe = in.readLine();
+                    
+                        out.println("idT :");
+                        out.flush();
+                        idT = in.readLine();
+                    
+                        out.println("idU :");
+                        out.flush();
+                        idU = in.readLine();
+                    
+                        out.println("titre :");
+                        out.flush();
+                        titre = in.readLine();
+                    
+                        out.println("p :");
+                        out.flush();
+                        p = in.readLine();
+                    
+                        out.println("dateC :");
+                        out.flush();
+                        dc = in.readLine();
+                    
+                        out.println("dateF :");
+                        out.flush();
+                        df = in.readLine();
+                    
+                        out.println("d :");
+                        out.flush();
+                        d = in.readLine();
+                    
+                        CreerTaches creerTache = new CreerTaches();
+                        creerTache.EditTacheEtat(idTe, idT, idU, titre, d, dc, df, p);
+                        gestionTache = true;
+                    }
+                    }
+                     if(user.equals("supT")) 
+                    {
+                        while(!gestionTache){
+                       
+                    
+                        out.println("idT :");
+                        out.flush();
+                        idT = in.readLine();
+                    
+                        out.println("idU :");
+                        out.flush();
+                        idU = in.readLine();
+                    
+                        out.println("titre :");
+                        out.flush();
+                        titre = in.readLine();
+                    
+                        out.println("p :");
+                        out.flush();
+                        p = in.readLine();
+                    
+                        out.println("dateC :");
+                        out.flush();
+                        dc = in.readLine();
+                    
+                        out.println("dateF :");
+                        out.flush();
+                        df = in.readLine();
+                    
+                        out.println("d :");
+                        out.flush();
+                        d = in.readLine();
+                    
+                        CreerTaches creerTache = new CreerTaches();
+                        creerTache.EditTacheSup(idT, idU, titre, d, dc, df, p);
+                        gestionTache = true;
+                    }
                     }
                 
                 

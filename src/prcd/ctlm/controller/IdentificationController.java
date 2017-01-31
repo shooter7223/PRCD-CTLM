@@ -1,6 +1,7 @@
 package prcd.ctlm.controller;
 
 import prcd.ctlm.client.MultieClient;
+import prcd.ctlm.client.SaveUser;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,8 +28,8 @@ public class IdentificationController {
     
     @FXML
     private void connexion(ActionEvent e) throws IOException, InterruptedException{
-        
-        client.clientLog(identifiantBox.getText(), mdpBox.getText(), "n");
+       
+        client.clientLog((SaveUser.user = identifiantBox.getText()), mdpBox.getText(), "n");;
         Thread.sleep(500);
         //System.out.println(client.connect.connect);
         if(client.connect.connectServer)ctlm.goHome(e);

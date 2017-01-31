@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<HBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.IdentificationController">
+<HBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.IdentificationController">
     <VBox>
         <Label styleClass="title" text="Connexion" />
         <Label text="Identifiant">
@@ -35,26 +35,26 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
-        <TextField />
+        <TextField fx:id="inom" />
         <Label text="Prénom">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
-        <TextField />
+        <TextField fx:id="iprenom" />
         <Label text="E-mail">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
-        <TextField />
+        <TextField fx:id="imail" />
         <Label text="Identifiant">
             <VBox.margin><Insets top="5.0" /></VBox.margin>
         </Label>
-        <TextField />
+        <TextField fx:id="iid" />
         <Label text="Mot de passe">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
-        <TextField />
+        <TextField fx:id="imdp" />
         <Button mnemonicParsing="false" onAction="#inscription" text="Valider">
          <VBox.margin>
             <Insets top="10.0" />

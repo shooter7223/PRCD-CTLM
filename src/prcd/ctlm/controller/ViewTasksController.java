@@ -1,6 +1,7 @@
 package prcd.ctlm.controller;
 
 import prcd.ctlm.client.MultieClient;
+import prcd.ctlm.client.SaveUser;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,8 +54,8 @@ public class ViewTasksController {
     public void initialize() throws InterruptedException {
         // TODO
         System.out.println("initialisation");
-        System.out.println("az");
-        client.clientList("az");
+        System.out.println(SaveUser.user);
+        client.clientList(SaveUser.user);
         Thread.sleep(1000);
         listTask.setItems( FXCollections.observableArrayList(client.listTacheUser.listTache) );
     }    

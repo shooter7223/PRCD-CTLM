@@ -7,10 +7,14 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.AddTaskController">
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.AddTaskController">
     <GridPane>
         <columnConstraints>
             <ColumnConstraints />
@@ -18,6 +22,9 @@
         </columnConstraints>
         <Button onAction="#goHome" text="Accueil" />
         <Button onAction="#logOut" text="Déconnexion" GridPane.columnIndex="1" />
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
     </GridPane>
     <Label styleClass="title" text="Ajouter une tâche">
       <VBox.margin>
@@ -36,21 +43,28 @@
          </GridPane.margin></TextArea>
         <Label text="Priorité" GridPane.rowIndex="2" />
     <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
-        <RadioButton mnemonicParsing="false" text="Faible" textFill="WHITE" />
-        <RadioButton mnemonicParsing="false" text="Moyenne" textFill="WHITE">
+        <RadioButton fx:id="p1" mnemonicParsing="false" text="Faible" textFill="WHITE">
+            <toggleGroup>
+               <ToggleGroup fx:id="prio" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="p2" mnemonicParsing="false" text="Moyenne" textFill="WHITE" toggleGroup="$prio">
             <HBox.margin><Insets left="10.0" /></HBox.margin>
         </RadioButton>
-        <RadioButton mnemonicParsing="false" text="Élevée" textFill="WHITE">
+        <RadioButton fx:id="p3" mnemonicParsing="false" text="Élevée" textFill="WHITE" toggleGroup="$prio">
             <HBox.margin><Insets left="10.0" /></HBox.margin>
         </RadioButton>
         <GridPane.margin><Insets left="10.0" /></GridPane.margin>
     </HBox>
         <Label text="État" GridPane.rowIndex="3" />
         <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
-            <RadioButton mnemonicParsing="false" text="À créer" textFill="WHITE" />
-            <RadioButton mnemonicParsing="false" text="À reprendre" textFill="WHITE">
+            <RadioButton fx:id="e1" mnemonicParsing="false" text="A faire" textFill="WHITE">
+            <toggleGroup>
+               <ToggleGroup fx:id="etat" />
+            </toggleGroup></RadioButton>
+            <RadioButton fx:id="e2" mnemonicParsing="false" text="En cours" textFill="WHITE" toggleGroup="$etat">
                 <HBox.margin><Insets left="10.0" /></HBox.margin>
             </RadioButton>
+         <RadioButton fx:id="e3" mnemonicParsing="false" text="Fini" textFill="WHITE" toggleGroup="$etat" />
             <GridPane.margin><Insets bottom="5.0" left="10.0" top="5.0" /></GridPane.margin>
         </HBox>
         <Label maxWidth="1.7976931348623157E308" text="Debut/Fin" GridPane.rowIndex="4" />

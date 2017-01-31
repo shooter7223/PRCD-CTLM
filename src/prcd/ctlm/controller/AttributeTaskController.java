@@ -3,6 +3,8 @@ package prcd.ctlm.controller;
 import prcd.ctlm.client.MultieClient;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -27,10 +29,7 @@ public class AttributeTaskController {
     
     @FXML
     private void goHome(ActionEvent e) throws IOException{
-        String user = (String) userlist.getSelectionModel().getSelectedItem();
-        String [] userSplit = user.split("\n");
-        String [] userId = userSplit[0].split(" ");
-        user = userId[2];
+        ctlm.goHome(e);
         
     }
     
@@ -40,12 +39,33 @@ public class AttributeTaskController {
     }
     
     @FXML
-    private void validate(ActionEvent e) throws IOException{
+    private void validate(ActionEvent e) throws IOException, InterruptedException{
+        
+        String idUe = (String) userlist.getSelectionModel().getSelectedItem();
+        String [] userSplit = idUe.split("\n");
+        String [] userId = userSplit[0].split(" ");
+        idUe = userId[2];
+        
+        String tache = (String) listTache.getSelectionModel().getSelectedItem();
+        String [] tacheSplit = tache.split("\n");
+        List<String> editTache = new ArrayList<String>();
+        
+        for(int i = 0; i < tacheSplit.length; i++)
+        {
+            String [] tacheId = tacheSplit[i].split(":");
+            editTache.add(tacheId[1]);
+            
+        }
+       
+        
+        client.clientEditT(idUe, editTache.get(1), editTache.get(2), editTache.get(0), editTache.get(6), editTache.get(3), editTache.get(4), editTache.get(5));
+        Thread.sleep(500);
         ctlm.viewTasks(e);
     }
     
     @FXML
     private void finish(ActionEvent e) throws IOException{
+       
         ctlm.viewTasks(e);
     }
     

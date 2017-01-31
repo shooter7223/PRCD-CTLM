@@ -22,12 +22,12 @@ import static prcd.ctlm.client.Connexion.prenom;
 public class AddTaskClient implements Runnable {
 
 	private Socket socket = null;
-        private String idT = null, idU = null, titre = null, p = null , d = null, dc = null, df = null;
+        private String idT = null, idU = null, titre = null, p = null , d = null, dc = null, df = null, idUe = null, idTe = null, user = null;
         private PrintWriter out = null;
 	private BufferedReader in = null;
         private boolean connect = false;
         
-        public AddTaskClient(Socket s, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_){
+        public AddTaskClient(Socket s, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_, String user_){
 		
 		socket = s;
                 idT = idT_;
@@ -37,17 +37,33 @@ public class AddTaskClient implements Runnable {
                 df = df_;
                 p = p_;
                 d = d_;
+                user = user_;
                 
 	}
-        
+        public AddTaskClient(Socket s,String idUe_, String idT_, String idU_, String titre_, String d_ ,String dc_, String df_, String p_, String user_){
+		
+		socket = s;
+                idUe = idUe_;
+                idT = idT_;
+                idU = idU_;
+                titre = titre_;
+                dc = dc_;
+                df = df_;
+                p = p_;
+                d = d_;
+                user = user_;
+                
+	}
         
         public void run() {
 		
 		try {
 			
 		out = new PrintWriter(socket.getOutputStream());
-		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));		
-		
+		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                
+		if(user.equals("supT"))
+                {
 		while(!connect ){
 		
 		System.out.println(in.readLine());
@@ -87,6 +103,145 @@ public class AddTaskClient implements Runnable {
                 
                 connect = true;
                 
+                }
+                }
+                
+                if(user.equals("addT"))
+                {
+		while(!connect ){
+		
+		System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idT);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idU);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(titre);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(p);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(dc);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(df);
+		out.flush();
+                
+                 System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(d);
+		out.flush();
+                
+                connect = true;
+                
+                }
+                }
+                else if(user.equals("editU") )
+                {
+                    while(!connect ){
+                        
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idUe);
+		out.flush();
+		
+		System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idT);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idU);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(titre);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(p);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(dc);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(df);
+		out.flush();
+                
+                 System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(d);
+		out.flush();
+                
+                connect = true;
+                }
+                }
+                else if(user.equals("editE") )
+                {
+                    while(!connect ){
+                        
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idUe);
+		out.flush();
+		
+		System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idT);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(idU);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(titre);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(p);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(dc);
+		out.flush();
+                
+                System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(df);
+		out.flush();
+                
+                 System.out.println(in.readLine());
+		//user = sc.nextLine();
+		out.println(d);
+		out.flush();
+                
+                connect = true;
+                }
                 }
 			
 		

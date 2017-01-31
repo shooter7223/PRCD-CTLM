@@ -8,8 +8,10 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import prcd.ctlm.CTLMProject;
 
 
@@ -31,13 +33,53 @@ public class AddTaskController {
     private TextField titreBox, dC, dF;
     
     @FXML
+    private ToggleGroup etat, prio;
+    
+    @FXML
+    private RadioButton e1,e2,e3,p1,p2,p3;
+            
+    @FXML
     private void goHome(ActionEvent e) throws IOException{
         ctlm.goHome(e);
     }
     
     @FXML
     private void create(ActionEvent e) throws IOException, InterruptedException{
-        client.clientAddT("idTachen1","idu2", titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),"p1" );;
+        String user = (String) userlist.getSelectionModel().getSelectedItem();
+        String [] userSplit = user.split("\n");
+        String [] userId = userSplit[0].split(" ");
+        user = userId[2];
+        
+        String Etat = null;
+        String Prio = null;
+        
+        if(e1.isSelected() == true)
+        {
+            Etat = "faible";
+        }
+        if(e2.isSelected() == true)
+        {
+            Etat = "Moyenne";
+        }
+        if(e3.isSelected() == true)
+        {
+            Etat = "Elevee";
+        }
+        
+        if(p1.isSelected() == true)
+        {
+            Prio = "A faire";
+        }
+        if(p2.isSelected() == true)
+        {
+            Prio = "En cours";
+        }
+        if(p3.isSelected() == true)
+        {
+            Prio = "Fini";
+        }
+        
+        client.clientAddT( Etat,user, titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),Prio );
         Thread.sleep(500);
         ctlm.viewTasks(e);
     }
