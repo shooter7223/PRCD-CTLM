@@ -25,7 +25,7 @@ public class ListUserView implements Runnable {
 	private BufferedReader in = null;
 	private Scanner sc = null;
         private String user;
-        private String reponseServeur = null;
+        private String reponseServeur = "";
         public List<String> listUser = new ArrayList<String>();
 	private boolean connect = false;
         

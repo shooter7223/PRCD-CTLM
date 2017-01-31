@@ -57,6 +57,7 @@ public class ViewTasksController {
         System.out.println(SaveUser.user);
         client.clientList(SaveUser.user);
         Thread.sleep(1000);
+         System.out.println(client.listTacheUser.listTache.get(0));
         listTask.setItems( FXCollections.observableArrayList(client.listTacheUser.listTache) );
     }    
     

@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import prcd.ctlm.CTLMProject;
+import prcd.ctlm.client.SaveUser;
 
 /**
  * @author Thomas Caspar and Thérésien Esberard
@@ -81,7 +82,7 @@ public class AttributeTaskController {
         client.clientListUser();
         Thread.sleep(500);
         userlist.setItems( FXCollections.observableArrayList(client.listUserview.listUser) );
-        client.clientList("0");
+        client.clientList(SaveUser.user);
         Thread.sleep(500);
         listTache.setItems( FXCollections.observableArrayList(client.listTacheUser.listTache) );
         
