@@ -30,7 +30,7 @@ public class CTLMProject extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("The Collaborative Todo List Manager");
+        this.primaryStage.setTitle("Chozafer");
         load("view/Identification.fxml", primaryStage);
     }
     
@@ -86,11 +86,6 @@ public class CTLMProject extends Application {
         
         UsersListController controller = loader.getController();
         controller.setDialogStage(stage);
-    }
-    
-    public void dummy(ActionEvent e) throws IOException{
-        Stage stage = (Stage) ((Button) e.getSource()).getScene().getWindow();
-        load("view/Dummy.fxml", stage);
     }
     
     /**
