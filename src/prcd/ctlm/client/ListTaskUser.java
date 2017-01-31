@@ -23,7 +23,7 @@ public class ListTaskUser implements Runnable {
 	private Socket socket = null;
         private PrintWriter out = null;
 	private BufferedReader in = null;
-        private String reponseServeur = null;
+        private String reponseServeur = "";
 	private Scanner sc = null;
 	private boolean connect = false;
         private String idT, idU, titre, description, dc, df, prio; 
@@ -79,8 +79,9 @@ public class ListTaskUser implements Runnable {
                         
                         
                     }
-                    else connect = true;
+                    else connect = true; 
                 }
+                 //System.out.println( "premier add : " + listTache.get(0));//debug
                 
                 } catch (IOException e) {
 			
