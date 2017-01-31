@@ -79,7 +79,7 @@ public class AddTaskController {
             Prio = "Fini";
         }
         
-        client.clientAddT( Etat,user, titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),Prio );
+        client.clientAddT( Prio,user, titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),Etat );
         Thread.sleep(500);
         ctlm.viewTasks(e);
     }

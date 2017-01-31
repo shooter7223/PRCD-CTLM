@@ -43,7 +43,7 @@ public class TakeTaskController {
         }
        
         
-        client.clientEditT(SaveUser.user, editTache.get(1), editTache.get(2), editTache.get(0), editTache.get(6), editTache.get(3), editTache.get(4), editTache.get(5));
+        client.clientEditT(SaveUser.user, editTache.get(5), editTache.get(2), editTache.get(0), editTache.get(6), editTache.get(3), editTache.get(4), editTache.get(1));
         Thread.sleep(500);
         
         ctlm.goHome(e);
