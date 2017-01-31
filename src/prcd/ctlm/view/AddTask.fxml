@@ -42,51 +42,29 @@
             <Insets bottom="5.0" left="10.0" top="5.0" />
          </GridPane.margin></TextArea>
         <Label text="Priorité" GridPane.rowIndex="2" />
-    <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
-        <RadioButton fx:id="p1" mnemonicParsing="false" text="Faible" textFill="WHITE">
-            <toggleGroup>
-               <ToggleGroup fx:id="prio" />
-            </toggleGroup></RadioButton>
-        <RadioButton fx:id="p2" mnemonicParsing="false" text="Moyenne" textFill="WHITE" toggleGroup="$prio">
-            <HBox.margin><Insets left="10.0" /></HBox.margin>
+    <HBox styleClass="addTaskHBox" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <RadioButton fx:id="p1" mnemonicParsing="false" text="Faible">
+            <toggleGroup><ToggleGroup fx:id="prio" /></toggleGroup>
         </RadioButton>
-        <RadioButton fx:id="p3" mnemonicParsing="false" text="Élevée" textFill="WHITE" toggleGroup="$prio">
-            <HBox.margin><Insets left="10.0" /></HBox.margin>
-        </RadioButton>
+        <RadioButton fx:id="p2" mnemonicParsing="false" text="Moyenne" toggleGroup="$prio" />
+        <RadioButton fx:id="p3" mnemonicParsing="false" text="Élevée" toggleGroup="$prio" />
         <GridPane.margin><Insets left="10.0" /></GridPane.margin>
     </HBox>
-        <Label text="État" GridPane.rowIndex="3" />
-        <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
-            <RadioButton fx:id="e1" mnemonicParsing="false" text="A faire" textFill="WHITE">
-            <toggleGroup>
-               <ToggleGroup fx:id="etat" />
-            </toggleGroup></RadioButton>
-            <RadioButton fx:id="e2" mnemonicParsing="false" text="En cours" textFill="WHITE" toggleGroup="$etat">
-                <HBox.margin><Insets left="10.0" /></HBox.margin>
+    <Label text="État" GridPane.rowIndex="3" />
+    <HBox styleClass="addTaskHBox" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <RadioButton fx:id="e1" mnemonicParsing="false" text="À faire">
+                <toggleGroup><ToggleGroup fx:id="etat" /></toggleGroup>
             </RadioButton>
-         <RadioButton fx:id="e3" mnemonicParsing="false" text="Fini" textFill="WHITE" toggleGroup="$etat" />
+            <RadioButton fx:id="e2" mnemonicParsing="false" text="En cours" toggleGroup="$etat" />
+         <RadioButton fx:id="e3" mnemonicParsing="false" text="Fini" toggleGroup="$etat" />
             <GridPane.margin><Insets bottom="5.0" left="10.0" top="5.0" /></GridPane.margin>
-        </HBox>
-        <Label maxWidth="1.7976931348623157E308" text="Debut/Fin" GridPane.rowIndex="4" />
-      <HBox prefHeight="33.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <children>
-            <TextField fx:id="dC" prefHeight="30.0" prefWidth="146.0" />
-            <Label prefHeight="20.0" prefWidth="22.0" text="/" />
-            <TextField fx:id="dF" />
-         </children>
-      </HBox>
-      <columnConstraints>
-         <ColumnConstraints />
-         <ColumnConstraints />
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-      </rowConstraints>
+    </HBox>
+    <Label maxWidth="1.7976931348623157E308" text="Debut/Fin" GridPane.rowIndex="4" />
+    <HBox styleClass="addTaskHBox" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <TextField fx:id="dC" prefHeight="30.0" prefWidth="146.0" />
+        <Label prefHeight="20.0" prefWidth="22.0" text="/" />
+        <TextField fx:id="dF" />
+    </HBox>
     </GridPane>
    <HBox prefHeight="41.0" prefWidth="327.0">
       <children>

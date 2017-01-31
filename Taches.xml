@@ -1,4 +1,4 @@
 <root>
-<Tache etat="faible" idU="lol" titre="polki" dateC="31/01/2017" dateF="31/01/2017"  priorite="En cours" >poiuyhjklm</Tache>
-<Tache etat="Elevee" idU="thomas.caspar" titre="Test de tache" dateC="30/01/2017" dateF="30/01/2017"  priorite=" En cours" > Test de tache</Tache>
+<Tache etat="faible" idU="toto" titre="polki" dateC="31/01/2017" dateF="31/01/2017"  priorite="En cours" >poiuyhjklm</Tache>
+<Tache etat="Elevee" idU="toto" titre="Test de tache" dateC="30/01/2017" dateF="30/01/2017"  priorite=" En cours" > Test de tache</Tache>
 </root>

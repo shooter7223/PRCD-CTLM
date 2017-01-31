@@ -8,56 +8,45 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<HBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.IdentificationController">
-    <VBox>
-        <Label styleClass="title" text="Connexion" />
-        <Label text="Identifiant">
-            <VBox.margin><Insets top="5.0" /></VBox.margin>
-        </Label>
-        <TextField fx:id="identifiantBox" />
-        <Label text="Mot de passe">
-            <VBox.margin><Insets top="5.0" /></VBox.margin>
-        </Label>
-        <TextField fx:id="mdpBox" />
-        <Button mnemonicParsing="false" onAction="#connexion" text="Valider">
-         <VBox.margin>
-            <Insets top="10.0" />
-         </VBox.margin></Button>
-    </VBox>
-   <Line endY="325" stroke="WHITE">
-      <HBox.margin>
-         <Insets left="10.0" right="10.0" />
-      </HBox.margin>
-   </Line>
-    <VBox>
-        <Label styleClass="title" text="Inscription" />
-        <Label text="Nom">
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin></Label>
-        <TextField fx:id="inom" />
-        <Label text="Prénom">
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin></Label>
-        <TextField fx:id="iprenom" />
-        <Label text="E-mail">
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin></Label>
-        <TextField fx:id="imail" />
-        <Label text="Identifiant">
-            <VBox.margin><Insets top="5.0" /></VBox.margin>
-        </Label>
-        <TextField fx:id="iid" />
-        <Label text="Mot de passe">
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin></Label>
-        <TextField fx:id="imdp" />
-        <Button mnemonicParsing="false" onAction="#inscription" text="Valider">
-         <VBox.margin>
-            <Insets top="10.0" />
-         </VBox.margin></Button>
-    </VBox>
-</HBox>
+<VBox styleClass="CTLM" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prcd.ctlm.controller.IdentificationController">
+    <Label styleClass="title" text="Bienvenue dans Chozafer !" />
+    <HBox styleClass="identificationHBox">
+        <VBox styleClass="identificationVBox">
+            <Label styleClass="subtitle" text="Connexion" />
+            <VBox>
+                <Label text="Identifiant" />
+                <TextField fx:id="identifiantBox" />
+            </VBox>
+            <VBox>
+                <Label text="Mot de passe" />
+                <TextField fx:id="mdpBox" />
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#connexion" text="Valider" />
+        </VBox>
+        <Line endY="325" stroke="WHITE" />
+        <VBox styleClass="identificationVBox">
+            <Label styleClass="subtitle" text="Inscription" />
+            <VBox>
+                <Label text="Nom" />
+                <TextField fx:id="inom" />
+            </VBox>
+            <VBox>
+                <Label text="Prénom" />
+                <TextField fx:id="iprenom" />
+            </VBox>
+            <VBox>
+                <Label text="E-mail" />
+                <TextField fx:id="imail" />
+            </VBox>
+            <VBox>
+                <Label text="Identifiant" />
+                <TextField fx:id="iid" />
+            </VBox>
+            <VBox>
+                <Label text="Mot de passe" />
+                <TextField fx:id="imdp" />
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#inscription" text="Valider" />
+          </VBox>
+      </HBox>
+</VBox>
