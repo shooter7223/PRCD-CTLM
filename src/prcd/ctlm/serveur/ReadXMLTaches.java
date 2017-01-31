@@ -46,22 +46,22 @@ public class ReadXMLTaches {
                         
                         if(idU.equals(idU_))
                         {
-                            listTache.add("Titre :" + titre);
-                            listTache.add("Etat de la Tache :" + idT);
-                            listTache.add("Id de l'utilisateur :" + idU);
-                            listTache.add("Date de Commensement :" + dateC);
-                            listTache.add("Date de Fin :" + dateF);
-                            listTache.add("Priotite :" + priorite);
+                            listTache.add("Tâche :" + titre);
+                            listTache.add("Priorité :" + priorite);
+                            listTache.add("Utilisateur :" + idU);
+                            listTache.add("Début :" + dateC);
+                            listTache.add("Fin :" + dateF);
+                            listTache.add("État :" + idT);
                             Tache = true;
                         }
                         if(idU_.equals("0"))
                         {
-                            listTache.add("Titre :" + titre);
-                            listTache.add("Etat de la Tache :" + idT);
-                            listTache.add("Id de l'utilisateur :" + idU);
-                            listTache.add("Date de Commensement :" + dateC);
-                            listTache.add("Date de Fin :" + dateF);
-                            listTache.add("Priotite :" + priorite);
+                            listTache.add("Tâche :" + titre);
+                            listTache.add("Priorité :" + priorite);
+                            listTache.add("Utilisateur :" + idU);
+                            listTache.add("Début :" + dateC);
+                            listTache.add("Fin :" + dateF);
+                            listTache.add("État :" + idT);
                             Tache = true;
                         }
                        

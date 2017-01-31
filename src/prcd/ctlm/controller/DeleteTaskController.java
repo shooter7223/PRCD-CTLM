@@ -44,7 +44,7 @@ public class DeleteTaskController {
         }
        
         
-        client.clientEditSup(editTache.get(1), editTache.get(2), editTache.get(0), editTache.get(6), editTache.get(3), editTache.get(4), editTache.get(5));
+        client.clientEditSup(editTache.get(5), editTache.get(2), editTache.get(0), editTache.get(6), editTache.get(3), editTache.get(4), editTache.get(1));
         Thread.sleep(500);
         //ctlm.viewTasks(e);
         ctlm.goHome(e);
