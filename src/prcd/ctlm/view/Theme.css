@@ -12,6 +12,7 @@
     -fx-padding: 10px;
     -fx-font-family: "Raleway ExtraBold", "Segoe UI Semibold";
     -fx-font-size: 20pt;
+    -fx-wrap-text: true;
     }
 
 .title .text {
@@ -42,15 +43,11 @@
     -fx-text-fill: #582900;
 }
 
-.radiobutton {
-    -fx-text-fill: #582900;
+.radio-button .text {
+    -fx-fill: #582900;
 }
 
-.addTaskHBox{
-    -fx-spacing: 10px;
-}
-
-.home {
+.home, .addTask {
     -fx-alignment: center;
     -fx-hgap: 10px;
     -fx-vgap: 10px;
@@ -74,12 +71,12 @@
     -fx-border-color: white;
 }
 
-.identificationHBox {
+.identificationHBox, .bottomButtons {
     -fx-alignment: center;
     -fx-spacing: 10px;
 }
 
-.identificationVBox {
+.identificationVBox, .addTaskHBox {
     -fx-spacing: 10px;
 }
 
