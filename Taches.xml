@@ -1,4 +1,4 @@
 <root>
-<Tache etat="Fini" idU="toto" titre="Test Tache pour toto" dateC="01/02/2017" dateF="01/02/2017"  priorite="Moyenne" >Test Tache pour toto</Tache>
-<Tache etat="En cours" idU="thomas.caspar" titre="Test de tache" dateC="30/01/2017" dateF="30/01/2017"  priorite="Moyenne" > Test de tache</Tache>
+<Tache etat="En cours" idU="NewUser" titre="test" dateC="01/02/2017" dateF="01/02/2017"  priorite="Moyenne" >test</Tache>
+<Tache etat="En cours" idU="toto" titre="Test Tache pour toto" dateC="01/02/2017" dateF="01/02/2017"  priorite="Moyenne" >Test Tache pour toto</Tache>
 </root>

@@ -47,7 +47,7 @@
                 <toggleGroup><ToggleGroup fx:id="etat" /></toggleGroup>
             </RadioButton>
             <RadioButton fx:id="e2" mnemonicParsing="false" text="En cours" toggleGroup="$etat" />
-            <RadioButton fx:id="e3" mnemonicParsing="false" text="Fini" toggleGroup="$etat" />
+            <!--<RadioButton fx:id="e3" mnemonicParsing="false" text="Fini" toggleGroup="$etat" />-->
         </HBox>
         <Label text="Début" GridPane.columnIndex="0" GridPane.rowIndex="4" />
         <TextField fx:id="dC" GridPane.columnIndex="1" GridPane.rowIndex="4" />

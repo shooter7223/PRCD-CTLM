@@ -39,7 +39,7 @@ public class AddTaskController {
     private ToggleGroup etat, prio;
     
     @FXML
-    private RadioButton e1,e2,e3,p1,p2,p3;
+    private RadioButton e1,e2,p1,p2,p3;
             
     @FXML
     private void goHome(ActionEvent e) throws IOException{
@@ -58,28 +58,24 @@ public class AddTaskController {
         
         if(e1.isSelected() == true)
         {
-            Etat = "faible";
+            Prio = "A faire";
         }
         if(e2.isSelected() == true)
         {
-            Etat = "Moyenne";
-        }
-        if(e3.isSelected() == true)
-        {
-            Etat = "Elevee";
+            Prio = "En cours";
         }
         
         if(p1.isSelected() == true)
         {
-            Prio = "A faire";
+            Etat = "Faible";
         }
         if(p2.isSelected() == true)
         {
-            Prio = "En cours";
+            Etat = "Moyenne";
         }
         if(p3.isSelected() == true)
         {
-            Prio = "Fini";
+            Etat = "Elevee";
         }
         
         client.clientAddT( Prio,user, titreBox.getText(), descriptionBox.getText(),dC.getText(),dF.getText(),Etat );
