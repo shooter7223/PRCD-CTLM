@@ -13,6 +13,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import prcd.ctlm.CTLMProject;
+import javafx.scene.paint.Paint;
 
 
 /**
@@ -22,6 +23,8 @@ import prcd.ctlm.CTLMProject;
 public class AddTaskController {
     CTLMProject ctlm = new CTLMProject();
     private MultieClient client = new MultieClient() ;
+    
+    
     
     @FXML
     private TextArea descriptionBox;

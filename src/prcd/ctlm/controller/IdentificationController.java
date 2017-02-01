@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import prcd.ctlm.CTLMProject;
+import javafx.scene.paint.Paint;
 
 /*
  * @author Thomas Caspar and Thérésien Esberard
@@ -20,6 +21,7 @@ public class IdentificationController {
 
     private CTLMProject ctlm = new CTLMProject();
     private MultieClient client = new MultieClient() ;
+    static Paint valueError = Paint.valueOf("FF8080");
     
     @FXML
     private TextField identifiantBox, iid, inom, iprenom, imail;
@@ -39,6 +41,8 @@ public class IdentificationController {
         if(client.connect.connectServer)ctlm.goHome(e);
         else 
         {
+            identifiantBox.setStyle("-fx-control-inner-background: #"+valueError.toString().substring(2));
+            mdpBox.setStyle("-fx-control-inner-background: #"+valueError.toString().substring(2));
             ConnexionOK.setText("Identifiant ou mot de passe Incorrecte");
         }
 
